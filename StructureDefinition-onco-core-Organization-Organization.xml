@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Organization-Organization"/>
+  <version value="0.1.0"/>
+  <name value="Organization"/>
+  <status value="draft"/>
+  <fhirVersion value="4.0.0"/>
+  <kind value="resource"/>
+  <abstract value="false"/>
+  <type value="Organization"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Organization"/>
+  <derivation value="constraint"/>
+  <differential>
+    <element id="Organization.endpoint">
+      <path value="Organization.endpoint"/>
+      <max value="0"/>
+    </element>
+  </differential>
+</StructureDefinition>

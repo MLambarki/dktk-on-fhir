@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-ClinicalImpression-ClinicalImpression" />
+  <version value="0.1.0" />
+  <name value="ClinicalImpression" />
+  <status value="draft" />
+  <fhirVersion value="4.0.0" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="ClinicalImpression" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/ClinicalImpression" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="ClinicalImpression.code">
+      <path value="ClinicalImpression.code" />
+      <fixedCodeableConcept>
+        <text value="Verkauf" />
+      </fixedCodeableConcept>
+    </element>
+    <element id="ClinicalImpression.subject">
+      <path value="ClinicalImpression.subject" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Patient-Patient" />
+      </type>
+    </element>
+    <element id="ClinicalImpression.encounter">
+      <path value="ClinicalImpression.encounter" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Encounter-Encounter" />
+      </type>
+    </element>
+    <element id="ClinicalImpression.effective[x]">
+      <path value="ClinicalImpression.effective[x]" />
+      <min value="1" />
+      <type>
+        <code value="dateTime" />
+      </type>
+      <mapping>
+        <identity value="ADT-GEKID" />
+        <language value="DE" />
+        <map value="Verlauf:Untersuchungsdatum_Verlauf" />
+        <comment value="Verlauf:Untersuchungsdatum_Verlauf" />
+      </mapping>
+      <mapping>
+        <identity value="ISO-11179" />
+        <language value="DE" />
+        <map value="urn:dktk:dataelement:47:3, urn:dktk:dataelement:25:4, urn:dktk:dataelement:43:3, urn:dktk:dataelement:45:3 " />
+      </mapping>
+    </element>
+    <element id="ClinicalImpression.assessor">
+      <path value="ClinicalImpression.assessor" />
+      <max value="0" />
+    </element>
+    <element id="ClinicalImpression.previous">
+      <path value="ClinicalImpression.previous" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/ClinicalImpression" />
+        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-ClinicalImpression-ClinicalImpression" />
+      </type>
+    </element>
+    <element id="ClinicalImpression.problem">
+      <path value="ClinicalImpression.problem" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Condition" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/AllergyIntolerance" />
+        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Condition-Condition" />
+      </type>
+    </element>
+    <element id="ClinicalImpression.investigation">
+      <path value="ClinicalImpression.investigation" />
+      <max value="0" />
+    </element>
+    <element id="ClinicalImpression.protocol">
+      <path value="ClinicalImpression.protocol" />
+      <max value="0" />
+    </element>
+    <element id="ClinicalImpression.finding">
+      <path value="ClinicalImpression.finding" />
+      <min value="1" />
+    </element>
+    <element id="ClinicalImpression.finding.itemCodeableConcept">
+      <path value="ClinicalImpression.finding.itemCodeableConcept" />
+      <max value="0" />
+    </element>
+    <element id="ClinicalImpression.finding.itemReference">
+      <path value="ClinicalImpression.finding.itemReference" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Condition" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Observation" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Media" />
+        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Observation-Vitalstatus" />
+        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Observation-TumorstatusLymphknoten" />
+        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Observation-LokalerTumorstatus" />
+        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Observation-TumorstatusFernmetastasen" />
+        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Observation-GesamtbeurteilungTumorstatus" />
+        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Observation-Fernmetastasen" />
+      </type>
+    </element>
+    <element id="ClinicalImpression.prognosisCodeableConcept">
+      <path value="ClinicalImpression.prognosisCodeableConcept" />
+      <max value="0" />
+    </element>
+    <element id="ClinicalImpression.prognosisReference">
+      <path value="ClinicalImpression.prognosisReference" />
+      <max value="0" />
+    </element>
+    <element id="ClinicalImpression.supportingInfo">
+      <path value="ClinicalImpression.supportingInfo" />
+      <max value="0" />
+    </element>
+  </differential>
+</StructureDefinition>

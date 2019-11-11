@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-MedicationStatement-SYST" />
+  <version value="0.1.0" />
+  <name value="SYST" />
+  <status value="draft" />
+  <fhirVersion value="4.0.0" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="MedicationStatement" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/MedicationStatement" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="MedicationStatement.extension">
+      <path value="MedicationStatement.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="MedicationStatement.extension:StellungZurOp">
+      <path value="MedicationStatement.extension" />
+      <sliceName value="StellungZurOp" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Extension-StellungZurOp" />
+      </type>
+      <mapping>
+        <identity value="ADT-GEKID" />
+        <language value="DE" />
+        <map value="SYST:SYST_Stellung_OP" />
+        <comment value="SYST:SYST_Stellung_OP" />
+      </mapping>
+      <mapping>
+        <identity value="ISO-11179" />
+        <language value="DE" />
+        <map value="urn:dktk:dataelement:70:3" />
+        <comment value="urn:dktk:dataelement:70:3" />
+      </mapping>
+    </element>
+    <element id="MedicationStatement.extension:Intention">
+      <path value="MedicationStatement.extension" />
+      <sliceName value="Intention" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Extension-SYSTIntension" />
+      </type>
+      <mapping>
+        <identity value="ADT-GEKID" />
+        <language value="DE" />
+        <map value="SYST:SYST_Intention" />
+        <comment value="SYST:SYST_Intention" />
+      </mapping>
+      <mapping>
+        <identity value="ISO-11179" />
+        <language value="DE" />
+        <map value="urn:dktk:dataelement:69:2" />
+        <comment value="urn:dktk:dataelement:69:2" />
+      </mapping>
+    </element>
+    <element id="MedicationStatement.extension:Residualstatus">
+      <path value="MedicationStatement.extension" />
+      <sliceName value="Residualstatus" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Extension-Residualstatus" />
+      </type>
+    </element>
+    <element id="MedicationStatement.basedOn">
+      <path value="MedicationStatement.basedOn" />
+      <max value="0" />
+    </element>
+    <element id="MedicationStatement.partOf">
+      <path value="MedicationStatement.partOf" />
+      <max value="0" />
+    </element>
+    <element id="MedicationStatement.statusReason">
+      <path value="MedicationStatement.statusReason" />
+      <max value="0" />
+    </element>
+    <element id="MedicationStatement.category">
+      <path value="MedicationStatement.category" />
+      <min value="1" />
+      <binding>
+        <strength value="extensible" />
+        <valueSet value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/SYSTTherapieartVS" />
+      </binding>
+    </element>
+    <element id="MedicationStatement.category.coding">
+      <path value="MedicationStatement.category.coding" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="MedicationStatement.category.coding.code">
+      <path value="MedicationStatement.category.coding.code" />
+      <min value="1" />
+      <mapping>
+        <identity value="ADT-GEKID" />
+        <language value="DE" />
+        <map value="SYST:SYST_Therapieart" />
+        <comment value="SYST:SYST_Therapieart" />
+      </mapping>
+      <mapping>
+        <identity value="ISO-11179" />
+        <language value="DE" />
+        <map value="urn:dktk:dataelement:36:2, urn:dktk:dataelement:38:2, urn:dktk:dataelement:39:2, urn:dktk:dataelement:40:2, urn:dktk:dataelement:41:3, urn:dktk:dataelement:71:2 " />
+      </mapping>
+    </element>
+    <element id="MedicationStatement.medication[x]">
+      <path value="MedicationStatement.medication[x]" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/BooleanVS" />
+      </binding>
+    </element>
+    <element id="MedicationStatement.subject">
+      <path value="MedicationStatement.subject" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Patient-Patient" />
+      </type>
+    </element>
+    <element id="MedicationStatement.reasonReference">
+      <path value="MedicationStatement.reasonReference" />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Condition-Condition" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>

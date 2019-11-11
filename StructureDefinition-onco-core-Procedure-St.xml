@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Procedure-St" />
+  <version value="0.1.0" />
+  <name value="St" />
+  <status value="draft" />
+  <fhirVersion value="4.0.0" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Procedure" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Procedure" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Procedure.extension">
+      <path value="Procedure.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Procedure.extension:StellungZurOp">
+      <path value="Procedure.extension" />
+      <sliceName value="StellungZurOp" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Extension-StellungZurOp" />
+      </type>
+      <mapping>
+        <identity value="ADT-GEKID" />
+        <language value="DE" />
+        <map value="ST:ST_Stellung_OP" />
+        <comment value="ST:ST_Stellung_OP" />
+      </mapping>
+      <mapping>
+        <identity value="ISO-11179" />
+        <language value="DE" />
+        <map value="urn:dktk:dataelement:68:3" />
+        <comment value="urn:dktk:dataelement:68:3" />
+      </mapping>
+    </element>
+    <element id="Procedure.extension:Intention">
+      <path value="Procedure.extension" />
+      <sliceName value="Intention" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Extension-SYSTIntension" />
+      </type>
+      <mapping>
+        <identity value="ADT-GEKID" />
+        <language value="DE" />
+        <map value="ST:ST_Intention" />
+        <comment value="ST:ST_Intention" />
+      </mapping>
+      <mapping>
+        <identity value="ISO-11179" />
+        <language value="DE" />
+        <map value="urn:dktk:dataelement:67:2" />
+        <comment value="urn:dktk:dataelement:67:2" />
+      </mapping>
+    </element>
+    <element id="Procedure.extension:Residualstatus">
+      <path value="Procedure.extension" />
+      <sliceName value="Residualstatus" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Extension-Residualstatus" />
+      </type>
+    </element>
+    <element id="Procedure.basedOn">
+      <path value="Procedure.basedOn" />
+      <max value="0" />
+    </element>
+    <element id="Procedure.partOf">
+      <path value="Procedure.partOf" />
+      <max value="0" />
+    </element>
+    <element id="Procedure.category">
+      <path value="Procedure.category" />
+      <min value="1" />
+      <binding>
+        <strength value="extensible" />
+        <valueSet value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/SYSTTherapieartVS" />
+      </binding>
+    </element>
+    <element id="Procedure.category.coding">
+      <path value="Procedure.category.coding" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Procedure.category.coding.code">
+      <path value="Procedure.category.coding.code" />
+      <min value="1" />
+      <fixedCode value="ST" />
+      <mapping>
+        <identity value="ADT-GEKID" />
+        <language value="DE" />
+        <map value="Bestrahlung:ST_Beginn != NULL" />
+        <comment value="abzuleiten" />
+      </mapping>
+      <mapping>
+        <identity value="ISO-11179" />
+        <language value="DE" />
+        <map value="urn:dktk:dataelement:34:2" />
+        <comment value="urn:dktk:dataelement:34:2" />
+      </mapping>
+    </element>
+    <element id="Procedure.performed[x]">
+      <path value="Procedure.performed[x]" />
+      <max value="0" />
+    </element>
+    <element id="Procedure.asserter">
+      <path value="Procedure.asserter" />
+      <max value="0" />
+    </element>
+    <element id="Procedure.report">
+      <path value="Procedure.report" />
+      <max value="0" />
+    </element>
+    <element id="Procedure.followUp">
+      <path value="Procedure.followUp" />
+      <max value="0" />
+    </element>
+    <element id="Procedure.focalDevice">
+      <path value="Procedure.focalDevice" />
+      <max value="0" />
+    </element>
+    <element id="Procedure.usedReference">
+      <path value="Procedure.usedReference" />
+      <max value="0" />
+    </element>
+    <element id="Procedure.usedCode">
+      <path value="Procedure.usedCode" />
+      <max value="0" />
+    </element>
+  </differential>
+</StructureDefinition>
