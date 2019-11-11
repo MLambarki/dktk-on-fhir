@@ -1,2 +1,2 @@
-# DKTK-on-fhir
+# DKTK-on-FHIR
 MDS on FHIR
