@@ -47,7 +47,7 @@
     </element>
     <element id="Observation.category.coding.code">
       <path value="Observation.category.coding.code" />
-      <fixedCode value="survey" />
+      <fixedCode value="laboratory" />
     </element>
     <element id="Observation.code.coding.system">
       <path value="Observation.code.coding.system" />
@@ -63,6 +63,7 @@
       <type>
         <code value="Reference" />
         <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Patient-Patient" />
+        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Patient-Pseudonym" />
       </type>
     </element>
     <element id="Observation.focus">
@@ -117,7 +118,7 @@
       <mapping>
         <identity value="ADT-GEKID" />
         <language value="DE" />
-        <map value="Verlauf:Verlauf_Tumorstatus_Fernmetastasen IN (M, T, P, N, R) OR Fernmetastase:FM_Diagnosedatum != NULL    " />
+        <map value="Verlauf:Verlauf_Tumorstatus_Fernmetastasen IN (M, T, P, N, R) OR Fernmetastase:FM_Diagnosedatum != NULL" />
       </mapping>
       <mapping>
         <identity value="ISO-11179" />

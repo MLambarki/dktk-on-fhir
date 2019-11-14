@@ -32,8 +32,8 @@
       <mapping>
         <identity value="ADT-GEKID" />
         <language value="DE" />
-        <map value="Patienten_Stammdaten:Patienten_Geburtsdatum " />
-        <comment value="Patienten_Stammdaten:Patienten_Geburtsdatum  " />
+        <map value="Patienten_Stammdaten:Patienten_Geburtsdatum" />
+        <comment value="Patienten_Stammdaten:Patienten_Geburtsdatum" />
       </mapping>
       <mapping>
         <identity value="ISO-11179" />
@@ -47,6 +47,13 @@
       <sliceName value="deceasedDateTime" />
       <type>
         <code value="dateTime" />
+      </type>
+    </element>
+    <element id="Patient.deceased[x]:deceasedBoolean">
+      <path value="Patient.deceasedBoolean" />
+      <sliceName value="deceasedBoolean" />
+      <type>
+        <code value="boolean" />
       </type>
     </element>
     <element id="Patient.maritalStatus">

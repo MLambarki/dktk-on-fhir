@@ -93,6 +93,7 @@
     <element id="Procedure.code.coding:OPS.system">
       <path value="Procedure.code.coding.system" />
       <min value="1" />
+      <fixedUri value="http://fhir.de/CodeSystem/dimdi/ops" />
     </element>
     <element id="Procedure.code.coding:OPS.version">
       <path value="Procedure.code.coding.version" />
@@ -111,9 +112,8 @@
       <path value="Procedure.subject" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group" />
         <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Patient-Patient" />
+        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Patient-Pseudonym" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -121,7 +121,6 @@
       <path value="Procedure.encounter" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Encounter" />
         <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Encounter-Encounter" />
       </type>
     </element>
@@ -141,12 +140,6 @@
       <path value="Procedure.performer.actor" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device" />
         <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Organization-Organization" />
       </type>
     </element>
@@ -154,12 +147,7 @@
       <path value="Procedure.reasonReference" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Condition" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Observation" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Procedure" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/DiagnosticReport" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/DocumentReference" />
-        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/DKTKCondition&quot;" />
+        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Condition-Condition" />
       </type>
     </element>
     <element id="Procedure.bodySite">

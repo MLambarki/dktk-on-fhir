@@ -37,6 +37,7 @@
       <type>
         <code value="Reference" />
         <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Patient-Patient" />
+        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Patient-Pseudonym" />
       </type>
     </element>
     <element id="Observation.focus">
@@ -130,9 +131,15 @@
       <path value="Observation.component.value[x]" />
       <short value="Kennzeichnet Vorhandensein multipler Primärtumoren in einem Bezirk" />
       <definition value="Kennzeichnet Vorhandensein multipler Primärtumoren in einem Bezirk&#xD;&#xA;(m) = multiple Tumoren ohne Angabe der Zahl&#xD;&#xA;(Zahl) = Anzahl der multiplen Tumoren" />
+      <min value="1" />
       <type>
-        <code value="string" />
+        <code value="CodeableConcept" />
       </type>
+      <binding>
+        <strength value="required" />
+        <description value="TNM y-Symbol" />
+        <valueSet value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/TNMySymbolVS" />
+      </binding>
       <mapping>
         <identity value="ADT-GEKID" />
         <language value="DE" />
@@ -178,11 +185,16 @@
     </element>
     <element id="Observation.component:TNM-r-Symbol.value[x]">
       <path value="Observation.component.value[x]" />
-      <short value="Kennzeichnet Vorhandensein multipler Primärtumoren in einem Bezirk" />
-      <definition value="Kennzeichnet Vorhandensein multipler Primärtumoren in einem Bezirk&#xD;&#xA;(m) = multiple Tumoren ohne Angabe der Zahl&#xD;&#xA;(Zahl) = Anzahl der multiplen Tumoren" />
+      <short value="Gibt an, ob es sich bei dem Tumor um ein beurteiltes Rezidiv handelt" />
+      <min value="1" />
       <type>
-        <code value="string" />
+        <code value="CodeableConcept" />
       </type>
+      <binding>
+        <strength value="required" />
+        <description value="TNM r-Symbol" />
+        <valueSet value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/TNMrSymbolVS" />
+      </binding>
       <mapping>
         <identity value="ADT-GEKID" />
         <language value="DE" />
@@ -224,6 +236,7 @@
       <path value="Observation.component.value[x]" />
       <short value="Kennzeichnet Vorhandensein multipler Primärtumoren in einem Bezirk" />
       <definition value="Kennzeichnet Vorhandensein multipler Primärtumoren in einem Bezirk&#xD;&#xA;(m) = multiple Tumoren ohne Angabe der Zahl&#xD;&#xA;(Zahl) = Anzahl der multiplen Tumoren" />
+      <min value="1" />
       <type>
         <code value="string" />
       </type>

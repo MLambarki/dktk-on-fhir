@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><ValueSet xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns="http://hl7.org/fhir">
     <text>
         <status value="generated"/>
         <div xmlns="http://www.w3.org/1999/xhtml">
@@ -29,7 +30,7 @@
             </concept>
             <concept>
                 <code value="9"/>
-                <display value="&#34;native&#34; Klassifikation vor Eintreten eines Rezidivs"/>
+                <display value="native Klassifikation vor Eintreten eines Rezidivs"/>
             </concept>
         </include>
     </compose>

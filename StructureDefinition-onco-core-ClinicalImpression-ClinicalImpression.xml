@@ -14,7 +14,7 @@
     <element id="ClinicalImpression.code">
       <path value="ClinicalImpression.code" />
       <fixedCodeableConcept>
-        <text value="Verkauf" />
+        <text value="Verlauf" />
       </fixedCodeableConcept>
     </element>
     <element id="ClinicalImpression.subject">
@@ -22,6 +22,7 @@
       <type>
         <code value="Reference" />
         <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Patient-Patient" />
+        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Patient-Pseudonym" />
       </type>
     </element>
     <element id="ClinicalImpression.encounter">
@@ -46,7 +47,7 @@
       <mapping>
         <identity value="ISO-11179" />
         <language value="DE" />
-        <map value="urn:dktk:dataelement:47:3, urn:dktk:dataelement:25:4, urn:dktk:dataelement:43:3, urn:dktk:dataelement:45:3 " />
+        <map value="urn:dktk:dataelement:47:3, urn:dktk:dataelement:25:4, urn:dktk:dataelement:43:3, urn:dktk:dataelement:45:3" />
       </mapping>
     </element>
     <element id="ClinicalImpression.assessor">
@@ -66,7 +67,6 @@
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Condition" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/AllergyIntolerance" />
         <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Condition-Condition" />
       </type>
     </element>
@@ -88,6 +88,7 @@
     </element>
     <element id="ClinicalImpression.finding.itemReference">
       <path value="ClinicalImpression.finding.itemReference" />
+      <min value="1" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Condition" />

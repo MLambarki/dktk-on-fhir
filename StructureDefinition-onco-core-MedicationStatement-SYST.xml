@@ -106,7 +106,7 @@
       <mapping>
         <identity value="ISO-11179" />
         <language value="DE" />
-        <map value="urn:dktk:dataelement:36:2, urn:dktk:dataelement:38:2, urn:dktk:dataelement:39:2, urn:dktk:dataelement:40:2, urn:dktk:dataelement:41:3, urn:dktk:dataelement:71:2 " />
+        <map value="urn:dktk:dataelement:36:2, urn:dktk:dataelement:38:2, urn:dktk:dataelement:39:2, urn:dktk:dataelement:40:2, urn:dktk:dataelement:41:3, urn:dktk:dataelement:71:2" />
       </mapping>
     </element>
     <element id="MedicationStatement.medication[x]">
@@ -114,16 +114,24 @@
       <type>
         <code value="CodeableConcept" />
       </type>
-      <binding>
-        <strength value="required" />
-        <valueSet value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/BooleanVS" />
-      </binding>
+    </element>
+    <element id="MedicationStatement.medication[x].coding.code">
+      <path value="MedicationStatement.medication[x].coding.code" />
+      <min value="1" />
     </element>
     <element id="MedicationStatement.subject">
       <path value="MedicationStatement.subject" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Patient-Patient" />
+      </type>
+    </element>
+    <element id="MedicationStatement.context">
+      <path value="MedicationStatement.context" />
+      <type>
+        <code value="Reference" />
+        <profile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Encounter-Encounter" />
+        <aggregation value="referenced" />
       </type>
     </element>
     <element id="MedicationStatement.reasonReference">

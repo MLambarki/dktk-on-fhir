@@ -19,7 +19,7 @@
     <element id="Observation.category.coding.code">
       <path value="Observation.category.coding.code" />
       <min value="1" />
-      <fixedCode value="activity" />
+      <fixedCode value="laboratory" />
     </element>
     <element id="Observation.code.coding.system">
       <path value="Observation.code.coding.system" />
@@ -37,6 +37,7 @@
       <type>
         <code value="Reference" />
         <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Patient-Patient" />
+        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Patient-Pseudonym" />
       </type>
     </element>
     <element id="Observation.focus">

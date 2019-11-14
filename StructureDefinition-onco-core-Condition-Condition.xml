@@ -81,8 +81,8 @@
       <mapping>
         <identity value="ADT-GEKID" />
         <language value="DE" />
-        <map value="Diagnose:Primaertumor_ICD_Version " />
-        <comment value="Diagnose:Primaertumor_ICD_Version " />
+        <map value="Diagnose:Primaertumor_ICD_Version" />
+        <comment value="Diagnose:Primaertumor_ICD_Version" />
       </mapping>
       <mapping>
         <identity value="ISO-11179" />
@@ -209,6 +209,7 @@
       <type>
         <code value="Reference" />
         <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Patient-Patient" />
+        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Patient-Pseudonym" />
       </type>
     </element>
     <element id="Condition.subject.reference">
@@ -232,7 +233,7 @@
       </slicing>
     </element>
     <element id="Condition.onset[x]:onsetDateTime">
-      <path value="Condition.onsetDateTime" />
+      <path value="Condition.onset[x]" />
       <sliceName value="onsetDateTime" />
       <definition value="date-time  the condition began" />
       <type>
@@ -252,7 +253,7 @@
       </mapping>
     </element>
     <element id="Condition.onset[x]:onsetAge">
-      <path value="Condition.onsetAge" />
+      <path value="Condition.onset[x]" />
       <sliceName value="onsetAge" />
       <short value="Estimated age" />
       <min value="1" />
@@ -267,26 +268,26 @@
       </mapping>
     </element>
     <element id="Condition.onset[x]:onsetAge.value">
-      <path value="Condition.onsetAge.value" />
+      <path value="Condition.onset[x].value" />
       <min value="1" />
     </element>
     <element id="Condition.onset[x]:onsetAge.comparator">
-      <path value="Condition.onsetAge.comparator" />
+      <path value="Condition.onset[x].comparator" />
       <max value="0" />
     </element>
     <element id="Condition.onset[x]:onsetAge.unit">
-      <path value="Condition.onsetAge.unit" />
+      <path value="Condition.onset[x].unit" />
       <short value="Jahre" />
       <definition value="Alter in Jahren" />
       <min value="1" />
       <fixedString value="Jahre" />
     </element>
     <element id="Condition.onset[x]:onsetAge.system">
-      <path value="Condition.onsetAge.system" />
+      <path value="Condition.onset[x].system" />
       <fixedUri value="http://unitsofmeasure.org/" />
     </element>
     <element id="Condition.onset[x]:onsetAge.code">
-      <path value="Condition.onsetAge.code" />
+      <path value="Condition.onset[x].code" />
       <fixedCode value="a" />
     </element>
     <element id="Condition.abatement[x]">

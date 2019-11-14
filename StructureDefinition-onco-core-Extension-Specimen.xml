@@ -5,7 +5,7 @@
   <status value="draft"/>
   <date value="2019-07-01"/>
   <publisher value="DKTK"/>
-  <description value="Extension: ein Verweis auf die Probe"/>
+  <description value="Extension: ein Referenz zur Probe"/>
   <fhirVersion value="4.0.0"/>
   <kind value="complex-type"/>
   <abstract value="false"/>
@@ -17,26 +17,31 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension"/>
   <derivation value="constraint"/>
   <differential>
+    <element id="Extension">
+      <path value="Extension" />
+      <short value="Referenz zur Probe" />
+      <definition value="Referenz zur Probe/Specimen (GBA-Profil)" />
+      <min value="0" />
+      <max value="*" />
+    </element>
+    <element id="Extension.extension">
+      <path value="Extension.extension" />
+      <min value="0" />
+      <max value="0" />
+    </element>
     <element id="Extension.url">
-      <path value="Extension.url"/>
-      <fixedString value="http://dktk.dkfz.de/fhir/StructureDefinition/DKTKExtension_GBASpecimen"/>
+      <path value="Extension.url" />
+      <type>
+        <code value="uri" />
+      </type>
+      <fixedUri value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Extension-Specimen" />
     </element>
     <element id="Extension.value[x]">
-      <path value="Extension.value[x]"/>
-      <slicing>
-        <discriminator>
-          <type value="type"/>
-          <path value="$this"/>
-        </discriminator>
-      </slicing>
-    </element>
-    <element id="Extension.value[x]:valueReference">
-      <path value="Extension.value[x]"/>
-      <sliceName value="valueReference"/>
+      <path value="Extension.value[x]" />
       <type>
-        <code value="Reference"/>
+        <code value="Reference" />
         <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Specimen-Gba"/>
-        <aggregation value="referenced"/>
+        <aggregation value="referenced" />
       </type>
     </element>
   </differential>

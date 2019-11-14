@@ -18,7 +18,7 @@
     <element id="Observation.category.coding.code">
       <path value="Observation.category.coding.code"/>
       <min value="1"/>
-      <fixedCode value="activity"/>
+      <fixedCode value="procedure"/>
     </element>
     <element id="Observation.code.coding.system">
       <path value="Observation.code.coding.system"/>
