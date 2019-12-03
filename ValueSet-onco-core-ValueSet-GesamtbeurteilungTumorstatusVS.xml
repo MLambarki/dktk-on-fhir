@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><ValueSet xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns="http://hl7.org/fhir">
     <text>
         <status value="generated"/>
         <div xmlns="http://www.w3.org/1999/xhtml">
@@ -22,14 +23,17 @@
     <description value="Gesamtbeurteilung Tumorstatus"/>
     <compose>
         <include>
-            <system value="http://dktk.dkfz.de/fhir/onco/core/CodeSystem/GesamtbeurteilungTumorstatusCS"/>
+            <system
+                value="http://dktk.dkfz.de/fhir/onco/core/CodeSystem/GesamtbeurteilungTumorstatusCS"/>
             <concept>
                 <code value="V"/>
                 <display value="Vollremission (complete remission, CR)"/>
             </concept>
             <concept>
                 <code value="T"/>
-                <display value="Teilremission / mindestens 50% Rückgang des Tumors (partial remission, PR)"/>
+                <display
+                    value="Teilremission / mindestens 50% Rückgang des Tumors (partial remission, PR)"
+                />
             </concept>
             <concept>
                 <code value="K"/>
@@ -45,7 +49,9 @@
             </concept>
             <concept>
                 <code value="B"/>
-                <display value="Klinische Besserung des Zustandes, Kriterien für Teilremission jedoch nicht erfüllt (minimal response, MR)"/>
+                <display
+                    value="Klinische Besserung des Zustandes, Kriterien für Teilremission jedoch nicht erfüllt (minimal response, MR)"
+                />
             </concept>
             <concept>
                 <code value="R"/>

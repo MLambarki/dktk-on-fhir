@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><ValueSet xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns="http://hl7.org/fhir">
     <text>
         <status value="generated"/>
         <div xmlns="http://www.w3.org/1999/xhtml">
@@ -25,15 +26,21 @@
             <system value="http://dktk.dkfz.de/fhir/onco/core/CodeSystem/TNMcpuPraefixNCS"/>
             <concept>
                 <code value="c"/>
-                <display value="Kategorie wurde durch klinische Angaben festgestellt, bzw. erfüllt die Kriterien für p nicht"/>
+                <display
+                    value="Kategorie wurde durch klinische Angaben festgestellt, bzw. erfüllt die Kriterien für p nicht"
+                />
             </concept>
             <concept>
                 <code value="p"/>
-                <display value="Feststellung der Kategorie erfolgte durch eine pathohistologische Untersuchung, mit der auch der höchste Grad der jeweiligen Kategorie hätte festgestellt werden können"/>
+                <display
+                    value="Feststellung der Kategorie erfolgte durch eine pathohistologische Untersuchung, mit der auch der höchste Grad der jeweiligen Kategorie hätte festgestellt werden können"
+                />
             </concept>
             <concept>
                 <code value="u"/>
-                <display value="Feststellung mit Ultraschall (Unterkategorie von c mit besonderer diagnostischer Relevanz, z.B. beim Rektumkarzinom)"/>
+                <display
+                    value="Feststellung mit Ultraschall (Unterkategorie von c mit besonderer diagnostischer Relevanz, z.B. beim Rektumkarzinom)"
+                />
             </concept>
         </include>
     </compose>

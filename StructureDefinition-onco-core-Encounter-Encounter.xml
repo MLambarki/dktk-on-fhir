@@ -1,117 +1,123 @@
-<?xml version="1.0" encoding="utf-8"?>
-<StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Encounter-Encounter" />
-  <version value="0.1.0" />
-  <name value="Encounter" />
-  <status value="draft" />
-  <fhirVersion value="4.0.0" />
-  <kind value="resource" />
-  <abstract value="false" />
-  <type value="Encounter" />
-  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Encounter" />
-  <derivation value="constraint" />
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://hl7.org/fhir ../fhir-all-xsd/fhir-single.xsd"
+  xmlns="http://hl7.org/fhir">
+  <url value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Encounter-Encounter"/>
+  <version value="0.1.0"/>
+  <name value="Encounter"/>
+  <status value="draft"/>
+  <fhirVersion value="4.0.0"/>
+  <kind value="resource"/>
+  <abstract value="false"/>
+  <type value="Encounter"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Encounter"/>
+  <derivation value="constraint"/>
   <differential>
     <element id="Encounter.statusHistory">
-      <path value="Encounter.statusHistory" />
-      <max value="0" />
+      <path value="Encounter.statusHistory"/>
+      <max value="0"/>
     </element>
     <element id="Encounter.class.system">
-      <path value="Encounter.class.system" />
-      <fixedUri value="http://hl7.org/fhir/v3/ActCode" />
+      <path value="Encounter.class.system"/>
+      <fixedUri value="http://hl7.org/fhir/v3/ActCode"/>
     </element>
     <element id="Encounter.class.version">
-      <path value="Encounter.class.version" />
-      <max value="0" />
+      <path value="Encounter.class.version"/>
+      <max value="0"/>
     </element>
     <element id="Encounter.class.userSelected">
-      <path value="Encounter.class.userSelected" />
-      <max value="0" />
+      <path value="Encounter.class.userSelected"/>
+      <max value="0"/>
     </element>
     <element id="Encounter.classHistory">
-      <path value="Encounter.classHistory" />
-      <max value="0" />
+      <path value="Encounter.classHistory"/>
+      <max value="0"/>
     </element>
     <element id="Encounter.type">
-      <path value="Encounter.type" />
-      <max value="0" />
+      <path value="Encounter.type"/>
+      <max value="0"/>
     </element>
     <element id="Encounter.serviceType">
-      <path value="Encounter.serviceType" />
-      <max value="0" />
+      <path value="Encounter.serviceType"/>
+      <max value="0"/>
     </element>
     <element id="Encounter.priority">
-      <path value="Encounter.priority" />
-      <max value="0" />
+      <path value="Encounter.priority"/>
+      <max value="0"/>
     </element>
     <element id="Encounter.subject">
-      <path value="Encounter.subject" />
-      <short value="The patient present at the encounter" />
-      <min value="1" />
+      <path value="Encounter.subject"/>
+      <short value="The patient present at the encounter"/>
+      <min value="1"/>
       <type>
-        <code value="Reference" />
-        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Patient-Patient" />
-        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Patient-Pseudonym" />
+        <code value="Reference"/>
+        <targetProfile
+          value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Patient-Patient"/>
+        <targetProfile
+          value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Patient-Pseudonym"/>
       </type>
     </element>
     <element id="Encounter.episodeOfCare">
-      <path value="Encounter.episodeOfCare" />
-      <max value="0" />
+      <path value="Encounter.episodeOfCare"/>
+      <max value="0"/>
     </element>
     <element id="Encounter.participant">
-      <path value="Encounter.participant" />
-      <max value="0" />
+      <path value="Encounter.participant"/>
+      <max value="0"/>
     </element>
     <element id="Encounter.appointment">
-      <path value="Encounter.appointment" />
-      <max value="0" />
+      <path value="Encounter.appointment"/>
+      <max value="0"/>
     </element>
     <element id="Encounter.length">
-      <path value="Encounter.length" />
-      <max value="0" />
+      <path value="Encounter.length"/>
+      <max value="0"/>
     </element>
     <element id="Encounter.reasonCode">
-      <path value="Encounter.reasonCode" />
-      <max value="0" />
+      <path value="Encounter.reasonCode"/>
+      <max value="0"/>
     </element>
     <element id="Encounter.reasonReference">
-      <path value="Encounter.reasonReference" />
-      <max value="0" />
+      <path value="Encounter.reasonReference"/>
+      <max value="0"/>
     </element>
     <element id="Encounter.diagnosis">
-      <path value="Encounter.diagnosis" />
-      <max value="1" />
+      <path value="Encounter.diagnosis"/>
+      <max value="1"/>
     </element>
     <element id="Encounter.diagnosis.condition">
-      <path value="Encounter.diagnosis.condition" />
-      <short value="The diagnosis relevant to the encounter" />
+      <path value="Encounter.diagnosis.condition"/>
+      <short value="The diagnosis relevant to the encounter"/>
       <type>
-        <code value="Reference" />
-        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Condition-Condition" />
+        <code value="Reference"/>
+        <targetProfile
+          value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Condition-Condition"/>
       </type>
     </element>
     <element id="Encounter.diagnosis.use">
-      <path value="Encounter.diagnosis.use" />
-      <max value="0" />
+      <path value="Encounter.diagnosis.use"/>
+      <max value="0"/>
     </element>
     <element id="Encounter.account">
-      <path value="Encounter.account" />
-      <max value="0" />
+      <path value="Encounter.account"/>
+      <max value="0"/>
     </element>
     <element id="Encounter.hospitalization">
-      <path value="Encounter.hospitalization" />
-      <max value="0" />
+      <path value="Encounter.hospitalization"/>
+      <max value="0"/>
     </element>
     <element id="Encounter.location">
-      <path value="Encounter.location" />
-      <max value="0" />
+      <path value="Encounter.location"/>
+      <max value="0"/>
     </element>
     <element id="Encounter.serviceProvider">
-      <path value="Encounter.serviceProvider" />
-      <max value="0" />
+      <path value="Encounter.serviceProvider"/>
+      <max value="0"/>
     </element>
     <element id="Encounter.partOf">
-      <path value="Encounter.partOf" />
-      <max value="0" />
+      <path value="Encounter.partOf"/>
+      <max value="0"/>
     </element>
   </differential>
 </StructureDefinition>

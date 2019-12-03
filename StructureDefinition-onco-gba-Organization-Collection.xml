@@ -1,0 +1,255 @@
+
+<StructureDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://hl7.org/fhir ../fhir-all-xsd/fhir-single.xsd"
+  xmlns="http://hl7.org/fhir">
+  <url value="https://fhir.bbmri.de/StructureDefinition/Collection"/>
+  <name value="Collection"/>
+  <status value="draft"/>
+  <fhirVersion value="4.0.0"/>
+  <kind value="resource"/>
+  <abstract value="false"/>
+  <type value="Organization"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Organization"/>
+  <derivation value="constraint"/>
+  <differential>
+    <element id="Organization.extension">
+      <path value="Organization.extension"/>
+      <slicing>
+        <discriminator>
+          <type value="value"/>
+          <path value="url"/>
+        </discriminator>
+        <rules value="open"/>
+      </slicing>
+    </element>
+    <element id="Organization.extension:description">
+      <path value="Organization.extension"/>
+      <sliceName value="description"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="https://fhir.bbmri.de/StructureDefinition/OrganizationDescription"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Organization.extension:collectionType">
+      <path value="Organization.extension"/>
+      <sliceName value="collectionType"/>
+      <min value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="https://fhir.bbmri.de/StructureDefinition/CollectionType"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Organization.extension:dataCategory">
+      <path value="Organization.extension"/>
+      <sliceName value="dataCategory"/>
+      <min value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="https://fhir.bbmri.de/StructureDefinition/DataCategory"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Organization.identifier">
+      <path value="Organization.identifier"/>
+      <slicing>
+        <discriminator>
+          <type value="value"/>
+          <path value="system"/>
+        </discriminator>
+        <rules value="open"/>
+      </slicing>
+      <min value="1"/>
+    </element>
+    <element id="Organization.identifier:Bbmri-EricId">
+      <path value="Organization.identifier"/>
+      <sliceName value="Bbmri-EricId"/>
+      <min value="1"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Organization.identifier:Bbmri-EricId.system">
+      <path value="Organization.identifier.system"/>
+      <fixedUri value="http://www.bbmri-eric.eu/"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Organization.identifier:Bbmri-EricId.value">
+      <path value="Organization.identifier.value"/>
+      <constraint>
+        <key value="bbmri-id-local"/>
+        <severity value="warning"/>
+        <human
+          value="Shall contain only the local collection id, should only consist of roman letters and numbers."/>
+        <expression value="matches('^([a-zA-Z\\d])+$')"/>
+      </constraint>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Organization.name">
+      <path value="Organization.name"/>
+      <min value="1"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Organization.alias">
+      <path value="Organization.alias"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Organization.telecom">
+      <path value="Organization.telecom"/>
+      <max value="0"/>
+    </element>
+    <element id="Organization.partOf">
+      <path value="Organization.partOf"/>
+      <min value="1"/>
+      <type>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-hierarchy">
+          <valueBoolean value="true"/>
+        </extension>
+        <code value="Reference"/>
+        <targetProfile value="https://fhir.bbmri.de/StructureDefinition/Biobank"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Organization.contact">
+      <path value="Organization.contact"/>
+      <slicing>
+        <discriminator>
+          <type value="value"/>
+          <path value="purpose.coding.code"/>
+        </discriminator>
+        <rules value="open"/>
+      </slicing>
+    </element>
+    <element id="Organization.contact:head">
+      <path value="Organization.contact"/>
+      <sliceName value="head"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Organization.contact:head.purpose">
+      <path value="Organization.contact.purpose"/>
+      <min value="1"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Organization.contact:head.purpose.coding.system">
+      <path value="Organization.contact.purpose.coding.system"/>
+      <fixedUri value="http://terminology.hl7.org/CodeSystem/contactentity-type"/>
+    </element>
+    <element id="Organization.contact:head.purpose.coding.code">
+      <path value="Organization.contact.purpose.coding.code"/>
+      <fixedCode value="ADMIN"/>
+    </element>
+    <element id="Organization.contact:head.name.family">
+      <path value="Organization.contact.name.family"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Organization.contact:head.name.given">
+      <path value="Organization.contact.name.given"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Organization.contact:head.name.prefix">
+      <path value="Organization.contact.name.prefix"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Organization.contact:head.name.suffix">
+      <path value="Organization.contact.name.suffix"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Organization.contact:contact">
+      <path value="Organization.contact"/>
+      <sliceName value="contact"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Organization.contact:contact.purpose">
+      <path value="Organization.contact.purpose"/>
+      <min value="1"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Organization.contact:contact.purpose.coding.system">
+      <path value="Organization.contact.purpose.coding.system"/>
+      <fixedUri value="https://fhir.bbmri.de/CodeSystem/ContactType"/>
+    </element>
+    <element id="Organization.contact:contact.purpose.coding.code">
+      <path value="Organization.contact.purpose.coding.code"/>
+      <fixedCode value="RESEARCH"/>
+    </element>
+    <element id="Organization.contact:contact.name.family">
+      <path value="Organization.contact.name.family"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Organization.contact:contact.name.given">
+      <path value="Organization.contact.name.given"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Organization.contact:contact.name.prefix">
+      <path value="Organization.contact.name.prefix"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Organization.contact:contact.name.suffix">
+      <path value="Organization.contact.name.suffix"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Organization.contact:contact.telecom">
+      <path value="Organization.contact.telecom"/>
+      <slicing>
+        <discriminator>
+          <type value="value"/>
+          <path value="system"/>
+        </discriminator>
+        <rules value="open"/>
+      </slicing>
+      <min value="1"/>
+    </element>
+    <element id="Organization.contact:contact.telecom:phone">
+      <path value="Organization.contact.telecom"/>
+      <sliceName value="phone"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Organization.contact:contact.telecom:phone.system">
+      <path value="Organization.contact.telecom.system"/>
+      <fixedCode value="phone"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Organization.contact:contact.telecom:phone.value">
+      <path value="Organization.contact.telecom.value"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Organization.contact:contact.telecom:email">
+      <path value="Organization.contact.telecom"/>
+      <sliceName value="email"/>
+      <min value="1"/>
+      <max value="1"/>
+    </element>
+    <element id="Organization.contact:contact.telecom:email.system">
+      <path value="Organization.contact.telecom.system"/>
+      <fixedCode value="email"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Organization.contact:contact.telecom:email.value">
+      <path value="Organization.contact.telecom.value"/>
+      <min value="1"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Organization.contact:contact.address.line">
+      <path value="Organization.contact.address.line"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Organization.contact:contact.address.city">
+      <path value="Organization.contact.address.city"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Organization.contact:contact.address.postalCode">
+      <path value="Organization.contact.address.postalCode"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Organization.contact:contact.address.country">
+      <path value="Organization.contact.address.country"/>
+      <min value="1"/>
+      <mustSupport value="true"/>
+    </element>
+  </differential>
+</StructureDefinition>

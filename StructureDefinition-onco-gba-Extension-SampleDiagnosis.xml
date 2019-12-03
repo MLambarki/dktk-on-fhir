@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://hl7.org/fhir ../fhir-all-xsd/fhir-single.xsd"
+  xmlns="http://hl7.org/fhir">
+  <url value="https://fhir.bbmri.de/StructureDefinition/SampleDiagnosis"/>
+  <name value="SampleDiagnosis"/>
+  <status value="draft"/>
+  <fhirVersion value="4.0.0"/>
+  <kind value="complex-type"/>
+  <abstract value="false"/>
+  <context>
+    <type value="element"/>
+    <expression value="Specimen"/>
+  </context>
+  <type value="Extension"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+  <derivation value="constraint"/>
+  <differential>
+    <element id="Extension.url">
+      <path value="Extension.url"/>
+      <fixedUri value="https://fhir.bbmri.de/StructureDefinition/SampleDiagnosis"/>
+    </element>
+    <element id="Extension.value[x]">
+      <path value="Extension.value[x]"/>
+      <min value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+    </element>
+    <element id="Extension.value[x].coding">
+      <path value="Extension.value[x].coding"/>
+      <slicing>
+        <discriminator>
+          <type value="value"/>
+          <path value="system"/>
+        </discriminator>
+        <discriminator>
+          <type value="value"/>
+          <path value="version"/>
+        </discriminator>
+        <discriminator>
+          <type value="value"/>
+          <path value="$this"/>
+        </discriminator>
+        <rules value="closed"/>
+      </slicing>
+      <min value="1"/>
+      <constraint>
+        <key value="slicing-1"/>
+        <severity value="error"/>
+        <human value="When slice no-icd is present, the other slices must not be present"/>
+        <expression
+          value="no-icd.exists().not() or (icd-10-who.exists() or icd-10-gm.exists() or icd-9.exists()).not()"/>
+        <source value="Extension"/>
+      </constraint>
+    </element>
+    <element id="Extension.value[x].coding:icd-10-who">
+      <path value="Extension.value[x].coding"/>
+      <sliceName value="icd-10-who"/>
+    </element>
+    <element id="Extension.value[x].coding:icd-10-who.system">
+      <path value="Extension.value[x].coding.system"/>
+      <min value="1"/>
+      <fixedUri value="http://hl7.org/fhir/sid/icd-10"/>
+    </element>
+    <element id="Extension.value[x].coding:icd-10-who.code">
+      <path value="Extension.value[x].coding.code"/>
+      <min value="1"/>
+    </element>
+    <element id="Extension.value[x].coding:icd-10-gm">
+      <path value="Extension.value[x].coding"/>
+      <sliceName value="icd-10-gm"/>
+    </element>
+    <element id="Extension.value[x].coding:icd-10-gm.system">
+      <path value="Extension.value[x].coding.system"/>
+      <min value="1"/>
+      <fixedUri value="http://fhir.de/CodeSystem/dimdi/icd-10-gm"/>
+    </element>
+    <element id="Extension.value[x].coding:icd-10-gm.code">
+      <path value="Extension.value[x].coding.code"/>
+      <min value="1"/>
+    </element>
+    <element id="Extension.value[x].coding:icd-9">
+      <path value="Extension.value[x].coding"/>
+      <sliceName value="icd-9"/>
+    </element>
+    <element id="Extension.value[x].coding:icd-9.system">
+      <path value="Extension.value[x].coding.system"/>
+      <min value="1"/>
+      <fixedUri value="http://hl7.org/fhir/sid/icd-9"/>
+    </element>
+    <element id="Extension.value[x].coding:icd-9.code">
+      <path value="Extension.value[x].coding.code"/>
+      <min value="1"/>
+    </element>
+    <element id="Extension.value[x].coding:no-icd">
+      <path value="Extension.value[x].coding"/>
+      <sliceName value="no-icd"/>
+      <binding>
+        <strength value="required"/>
+        <valueSet value="https://fhir.bbmri.de/ValueSet/OtherSampleDiagnosis"/>
+      </binding>
+    </element>
+    <element id="Extension.value[x].coding:no-icd.system">
+      <path value="Extension.value[x].coding.system"/>
+      <min value="1"/>
+    </element>
+    <element id="Extension.value[x].coding:no-icd.code">
+      <path value="Extension.value[x].coding.code"/>
+      <min value="1"/>
+    </element>
+  </differential>
+</StructureDefinition>

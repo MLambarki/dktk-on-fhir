@@ -1,181 +1,195 @@
-<?xml version="1.0" encoding="utf-8"?>
-<StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Observation-Histologie" />
-  <version value="0.1.0" />
-  <name value="Histologie" />
-  <status value="draft" />
-  <fhirVersion value="4.0.0" />
-  <kind value="resource" />
-  <abstract value="false" />
-  <type value="Observation" />
-  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Observation" />
-  <derivation value="constraint" />
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://hl7.org/fhir ../fhir-all-xsd/fhir-single.xsd"
+  xmlns="http://hl7.org/fhir">
+  <url value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Observation-Histologie"/>
+  <version value="0.1.0"/>
+  <name value="Histologie"/>
+  <status value="draft"/>
+  <fhirVersion value="4.0.0"/>
+  <kind value="resource"/>
+  <abstract value="false"/>
+  <type value="Observation"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Observation"/>
+  <derivation value="constraint"/>
   <differential>
     <element id="Observation.basedOn">
-      <path value="Observation.basedOn" />
-      <max value="0" />
+      <path value="Observation.basedOn"/>
+      <max value="0"/>
     </element>
     <element id="Observation.partOf">
-      <path value="Observation.partOf" />
-      <max value="0" />
+      <path value="Observation.partOf"/>
+      <max value="0"/>
     </element>
     <element id="Observation.category">
-      <path value="Observation.category" />
-      <max value="0" />
+      <path value="Observation.category"/>
+      <max value="0"/>
     </element>
     <element id="Observation.code.coding.system">
-      <path value="Observation.code.coding.system" />
-      <fixedUri value="http://loinc.org" />
+      <path value="Observation.code.coding.system"/>
+      <fixedUri value="http://loinc.org"/>
     </element>
     <element id="Observation.code.coding.code">
-      <path value="Observation.code.coding.code" />
-      <fixedCode value="59847-4" />
+      <path value="Observation.code.coding.code"/>
+      <fixedCode value="59847-4"/>
     </element>
     <element id="Observation.subject">
-      <path value="Observation.subject" />
-      <min value="1" />
+      <path value="Observation.subject"/>
+      <min value="1"/>
       <type>
-        <code value="Reference" />
-        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Patient-Patient" />
-        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Patient-Pseudonym" />
+        <code value="Reference"/>
+        <targetProfile
+          value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Patient-Patient"/>
+        <targetProfile
+          value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Patient-Pseudonym"/>
       </type>
     </element>
     <element id="Observation.focus">
-      <path value="Observation.focus" />
-      <max value="0" />
+      <path value="Observation.focus"/>
+      <max value="0"/>
     </element>
     <element id="Observation.encounter">
-      <path value="Observation.encounter" />
+      <path value="Observation.encounter"/>
       <type>
-        <code value="Reference" />
-        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Encounter-Encounter" />
+        <code value="Reference"/>
+        <targetProfile
+          value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Encounter-Encounter"/>
       </type>
     </element>
     <element id="Observation.effective[x]">
-      <path value="Observation.effective[x]" />
-      <short value="effectiveDateTime" />
+      <path value="Observation.effective[x]"/>
+      <short value="effectiveDateTime"/>
       <type>
-        <code value="dateTime" />
+        <code value="dateTime"/>
       </type>
     </element>
     <element id="Observation.performer">
-      <path value="Observation.performer" />
+      <path value="Observation.performer"/>
       <type>
-        <code value="Reference" />
-        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Organization-Organization" />
+        <code value="Reference"/>
+        <targetProfile
+          value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Organization-Organization"/>
       </type>
     </element>
     <element id="Observation.value[x]">
-      <path value="Observation.value[x]" />
-      <min value="1" />
+      <path value="Observation.value[x]"/>
+      <min value="1"/>
       <type>
-        <code value="CodeableConcept" />
+        <code value="CodeableConcept"/>
       </type>
     </element>
     <element id="Observation.value[x].coding">
-      <path value="Observation.value[x].coding" />
-      <min value="1" />
-      <max value="1" />
+      <path value="Observation.value[x].coding"/>
+      <min value="1"/>
+      <max value="1"/>
     </element>
     <element id="Observation.value[x].coding.system">
-      <path value="Observation.value[x].coding.system" />
-      <short value="ICD-O-3" />
-      <definition value="International Classification of Diseases for Oncology, version 3" />
-      <min value="1" />
-      <fixedUri value="2.16.840.1.113883.6.43.1" />
+      <path value="Observation.value[x].coding.system"/>
+      <short value="ICD-O-3"/>
+      <definition value="International Classification of Diseases for Oncology, version 3"/>
+      <min value="1"/>
+      <fixedUri value="2.16.840.1.113883.6.43.1"/>
     </element>
     <element id="Observation.value[x].coding.version">
-      <path value="Observation.value[x].coding.version" />
-      <min value="1" />
+      <path value="Observation.value[x].coding.version"/>
+      <short value="ICD-O Katalog Morphologie (Version)"/>
+      <definition value="Katalogversion der ICD-O"/>
+      <min value="1"/>
       <binding>
-        <strength value="extensible" />
-        <description value="ICD-O-3 Version" />
-        <valueSet value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/ICDOVersionVS" />
+        <strength value="extensible"/>
+        <description value="ICD-O-3 Version"/>
+        <valueSet value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/ICDOVersionVS"/>
       </binding>
       <mapping>
-        <identity value="ADT-GEKID" />
-        <language value="DE" />
-        <map value="Histologie:Morphologie_ICD_O_Version " />
-        <comment value="Histologie:Morphologie_ICD_O_Version " />
+        <identity value="ADT-GEKID"/>
+        <language value="DE"/>
+        <map value="Histologie:Morphologie_ICD_O_Version "/>
+        <comment value="Histologie:Morphologie_ICD_O_Version "/>
       </mapping>
       <mapping>
-        <identity value="ISO-11179" />
-        <language value="DE" />
-        <map value="urn:dktk:dataelement:8:2" />
-        <comment value="urn:dktk:dataelement:8:2" />
+        <identity value="ISO-11179"/>
+        <language value="DE"/>
+        <map value="urn:dktk:dataelement:8:2"/>
+        <comment value="urn:dktk:dataelement:8:2"/>
       </mapping>
     </element>
     <element id="Observation.value[x].coding.code">
-      <path value="Observation.value[x].coding.code" />
-      <min value="1" />
+      <path value="Observation.value[x].coding.code"/>
+      <short value="Morphologie"/>
+      <definition
+        value="Gibt an, welche Histologie der Tumor aufweist, basierend auf der aktuellen ICD-O-3 Klassifizierung"/>
+      <min value="1"/>
       <binding>
-        <strength value="required" />
-        <description value="ICD-O-3 Morphologie" />
-        <valueSet value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/MorphologieICDO3VS" />
+        <strength value="required"/>
+        <description value="ICD-O-3 Morphologie"/>
+        <valueSet value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/MorphologieICDO3VS"/>
       </binding>
       <mapping>
-        <identity value="ADT-GEKID" />
-        <language value="DE" />
-        <map value="Histologie:Morphologie_Code" />
-        <comment value="Histologie:Morphologie_Code " />
+        <identity value="ADT-GEKID"/>
+        <language value="DE"/>
+        <map value="Histologie:Morphologie_Code"/>
+        <comment value="Histologie:Morphologie_Code "/>
       </mapping>
       <mapping>
-        <identity value="ISO-11179" />
-        <language value="DE" />
-        <map value="urn:dktk:dataelement:7:2" />
-        <comment value="urn:dktk:dataelement:7:2" />
+        <identity value="ISO-11179"/>
+        <language value="DE"/>
+        <map value="urn:dktk:dataelement:7:2"/>
+        <comment value="urn:dktk:dataelement:7:2"/>
       </mapping>
     </element>
     <element id="Observation.dataAbsentReason">
-      <path value="Observation.dataAbsentReason" />
-      <max value="0" />
+      <path value="Observation.dataAbsentReason"/>
+      <max value="0"/>
     </element>
     <element id="Observation.interpretation">
-      <path value="Observation.interpretation" />
-      <max value="0" />
+      <path value="Observation.interpretation"/>
+      <max value="0"/>
     </element>
     <element id="Observation.bodySite">
-      <path value="Observation.bodySite" />
-      <max value="0" />
+      <path value="Observation.bodySite"/>
+      <max value="0"/>
     </element>
     <element id="Observation.specimen">
-      <path value="Observation.specimen" />
+      <path value="Observation.specimen"/>
       <type>
-        <code value="Reference" />
-        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Extension-Specimen" />
+        <code value="Reference"/>
+        <targetProfile
+          value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Extension-Specimen"/>
       </type>
     </element>
     <element id="Observation.device">
-      <path value="Observation.device" />
-      <max value="0" />
+      <path value="Observation.device"/>
+      <max value="0"/>
     </element>
     <element id="Observation.referenceRange">
-      <path value="Observation.referenceRange" />
-      <max value="0" />
+      <path value="Observation.referenceRange"/>
+      <max value="0"/>
     </element>
     <element id="Observation.hasMember">
-      <path value="Observation.hasMember" />
+      <path value="Observation.hasMember"/>
       <slicing>
         <discriminator>
-          <type value="type" />
-          <path value="reference" />
+          <type value="type"/>
+          <path value="reference"/>
         </discriminator>
-        <rules value="open" />
+        <rules value="open"/>
       </slicing>
     </element>
     <element id="Observation.hasMember:Grading">
-      <path value="Observation.hasMember" />
-      <sliceName value="Grading" />
-      <min value="1" />
-      <max value="1" />
+      <path value="Observation.hasMember"/>
+      <sliceName value="Grading"/>
+      <min value="1"/>
+      <max value="1"/>
       <type>
-        <code value="Reference" />
-        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Observation-Grading" />
+        <code value="Reference"/>
+        <targetProfile
+          value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Observation-Grading"/>
       </type>
     </element>
     <element id="Observation.derivedFrom">
-      <path value="Observation.derivedFrom" />
-      <max value="0" />
+      <path value="Observation.derivedFrom"/>
+      <max value="0"/>
     </element>
   </differential>
 </StructureDefinition>

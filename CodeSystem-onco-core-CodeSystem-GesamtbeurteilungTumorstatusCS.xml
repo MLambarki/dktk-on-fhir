@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><CodeSystem xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSystem xmlns="http://hl7.org/fhir">
     <text>
         <status value="generated"/>
         <div xmlns="http://www.w3.org/1999/xhtml">
@@ -30,7 +31,8 @@
     </concept>
     <concept>
         <code value="T"/>
-        <display value="Teilremission / mindestens 50% Rückgang des Tumors (partial remission, PR)"/>
+        <display value="Teilremission / mindestens 50% Rückgang des Tumors (partial remission, PR)"
+        />
     </concept>
     <concept>
         <code value="K"/>
@@ -46,7 +48,9 @@
     </concept>
     <concept>
         <code value="B"/>
-        <display value="Klinische Besserung des Zustandes, Kriterien für Teilremission jedoch nicht erfüllt (minimal response, MR)"/>
+        <display
+            value="Klinische Besserung des Zustandes, Kriterien für Teilremission jedoch nicht erfüllt (minimal response, MR)"
+        />
     </concept>
     <concept>
         <code value="R"/>

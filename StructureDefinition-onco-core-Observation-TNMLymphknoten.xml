@@ -1,4 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?><StructureDefinition xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://hl7.org/fhir ../fhir-all-xsd/fhir-single.xsd"
+  xmlns="http://hl7.org/fhir">
   <url value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Observation-TNMLymphknoten"/>
   <version value="0.1.0"/>
   <name value="TNMLymphknoten"/>
@@ -35,8 +38,10 @@
       <min value="1"/>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Patient-Patient"/>
-        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Patient-Pseudonym" />
+        <targetProfile
+          value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Patient-Patient"/>
+        <targetProfile
+          value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Patient-Pseudonym"/>
       </type>
     </element>
     <element id="Observation.focus">
@@ -47,7 +52,8 @@
       <path value="Observation.encounter"/>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Encounter-Encounter"/>
+        <targetProfile
+          value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Encounter-Encounter"/>
       </type>
     </element>
     <element id="Observation.effective[x]">
@@ -64,6 +70,8 @@
     <element id="Observation.value[x]:valueCodeableConcept">
       <path value="Observation.value[x]"/>
       <sliceName value="valueCodeableConcept"/>
+      <short value="TNM-N"/>
+      <definition value="Gibt an, ob Lymphknoten befallen sind"/>
       <type>
         <code value="CodeableConcept"/>
       </type>
@@ -72,33 +80,35 @@
         <description value="TNM-N"/>
         <valueSet value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/TNMNVS"/>
       </binding>
-    <mapping>
-        <identity value="ADT-GEKID" />
-        <language value="DE" />
-        <map value="TNM:TNM_N" />
-        <comment value="TNM:TNM_N" />
+      <mapping>
+        <identity value="ADT-GEKID"/>
+        <language value="DE"/>
+        <map value="TNM:TNM_N"/>
+        <comment value="TNM:TNM_N"/>
       </mapping>
       <mapping>
-        <identity value="ISO-11179" />
-        <language value="DE" />
-        <map value="urn:dktk:dataelement:101:1" />
-        <comment value="urn:dktk:dataelement:101:1" />
+        <identity value="ISO-11179"/>
+        <language value="DE"/>
+        <map value="urn:dktk:dataelement:101:1"/>
+        <comment value="urn:dktk:dataelement:101:1"/>
       </mapping>
     </element>
     <element id="Observation.value[x]:valueCodeableConcept.coding.code">
-      <path value="Observation.valueCodeableConcept.coding.code" />
-      <min value="1" />
+      <path value="Observation.valueCodeableConcept.coding.code"/>
+      <short value="TNM-N"/>
+      <definition value="Gibt an, ob Lymphknoten befallen sind"/>
+      <min value="1"/>
       <mapping>
-        <identity value="ADT-GEKID" />
-        <language value="DE" />
-        <map value="TNM:TNM_N" />
-        <comment value="TNM:TNM_N" />
+        <identity value="ADT-GEKID"/>
+        <language value="DE"/>
+        <map value="TNM:TNM_N"/>
+        <comment value="TNM:TNM_N"/>
       </mapping>
       <mapping>
-        <identity value="ISO-11179" />
-        <language value="DE" />
-        <map value="urn:dktk:dataelement:101:1" />
-        <comment value="urn:dktk:dataelement:101:1" />
+        <identity value="ISO-11179"/>
+        <language value="DE"/>
+        <map value="urn:dktk:dataelement:101:1"/>
+        <comment value="urn:dktk:dataelement:101:1"/>
       </mapping>
     </element>
     <element id="Observation.dataAbsentReason">
@@ -132,6 +142,9 @@
     <element id="Observation.component.value[x]:valueCodeableConcept">
       <path value="Observation.component.value[x]"/>
       <sliceName value="valueCodeableConcept"/>
+      <short value="c/p/u-Präfix N"/>
+      <definition
+        value="Gibt an, ob die Klassifikation durch einen Arzt oder Pathologen erfolgt ist für N"/>
       <type>
         <code value="CodeableConcept"/>
       </type>
@@ -140,33 +153,36 @@
         <description value="c/p/u Praefix"/>
         <valueSet value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/TNMcpuPraefixTVS"/>
       </binding>
-    <mapping>
-        <identity value="ADT-GEKID" />
-        <language value="DE" />
-        <map value="TNM:TNM_c_p_u_Praefix_N" />
-        <comment value="TNM:TNM_c_p_u_Praefix_N" />
+      <mapping>
+        <identity value="ADT-GEKID"/>
+        <language value="DE"/>
+        <map value="TNM:TNM_c_p_u_Praefix_N"/>
+        <comment value="TNM:TNM_c_p_u_Praefix_N"/>
       </mapping>
       <mapping>
-        <identity value="ISO-11179" />
-        <language value="DE" />
-        <map value="urn:dktk:dataelement:79:1" />
-        <comment value="urn:dktk:dataelement:79:1" />
+        <identity value="ISO-11179"/>
+        <language value="DE"/>
+        <map value="urn:dktk:dataelement:79:1"/>
+        <comment value="urn:dktk:dataelement:79:1"/>
       </mapping>
     </element>
     <element id="Observation.component.value[x]:valueCodeableConcept.coding.code">
-      <path value="Observation.component.valueCodeableConcept.coding.code" />
-      <min value="1" />
+      <path value="Observation.component.valueCodeableConcept.coding.code"/>
+      <short value="c/p/u-Präfix N"/>
+      <definition
+        value="Gibt an, ob die Klassifikation durch einen Arzt oder Pathologen erfolgt ist für N"/>
+      <min value="1"/>
       <mapping>
-        <identity value="ADT-GEKID" />
-        <language value="DE" />
-        <map value="TNM:TNM_c_p_u_Praefix_N" />
-        <comment value="TNM:TNM_c_p_u_Praefix_N" />
+        <identity value="ADT-GEKID"/>
+        <language value="DE"/>
+        <map value="TNM:TNM_c_p_u_Praefix_N"/>
+        <comment value="TNM:TNM_c_p_u_Praefix_N"/>
       </mapping>
       <mapping>
-        <identity value="ISO-11179" />
-        <language value="DE" />
-        <map value="urn:dktk:dataelement:79:1" />
-        <comment value="urn:dktk:dataelement:79:1" />
+        <identity value="ISO-11179"/>
+        <language value="DE"/>
+        <map value="urn:dktk:dataelement:79:1"/>
+        <comment value="urn:dktk:dataelement:79:1"/>
       </mapping>
     </element>
     <element id="Observation.component.dataAbsentReason">

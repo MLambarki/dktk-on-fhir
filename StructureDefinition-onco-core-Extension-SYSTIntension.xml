@@ -1,49 +1,55 @@
-<?xml version="1.0" encoding="utf-8"?>
-<StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Extension-SYSTIntension" />
-  <version value="0.1.0" />
-  <name value="SYSTIntension" />
-  <status value="draft" />
-  <fhirVersion value="4.0.0" />
-  <kind value="complex-type" />
-  <abstract value="false" />
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://hl7.org/fhir ../fhir-all-xsd/fhir-single.xsd"
+  xmlns="http://hl7.org/fhir">
+  <url value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Extension-SYSTIntension"/>
+  <version value="0.1.0"/>
+  <name value="SYSTIntension"/>
+  <status value="draft"/>
+  <fhirVersion value="4.0.0"/>
+  <kind value="complex-type"/>
+  <abstract value="false"/>
   <context>
-    <type value="element" />
-    <expression value="MedicationStatement" />
+    <type value="element"/>
+    <expression value="MedicationStatement"/>
   </context>
-  <type value="Extension" />
-  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
-  <derivation value="constraint" />
+  <type value="Extension"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+  <derivation value="constraint"/>
   <differential>
     <element id="Extension.url">
-      <path value="Extension.url" />
-      <fixedUri value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Extension-SYSTIntension" />
+      <path value="Extension.url"/>
+      <fixedUri
+        value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Extension-SYSTIntension"/>
     </element>
     <element id="Extension.value[x]">
-      <path value="Extension.value[x]" />
-      <min value="1" />
+      <path value="Extension.value[x]"/>
+      <min value="1"/>
       <type>
-        <code value="CodeableConcept" />
+        <code value="CodeableConcept"/>
       </type>
       <binding>
-        <strength value="required" />
-        <valueSet value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/SYSTIntentionVS" />
+        <strength value="required"/>
+        <valueSet value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/SYSTIntentionVS"/>
       </binding>
     </element>
     <element id="Extension.value[x].coding.code">
-      <path value="Extension.value[x].coding.code" />
-      <min value="1" />
+      <path value="Extension.value[x].coding.code"/>
+      <short value="Intention der Therapie"/>
+      <definition value="Gibt die Intention der Therapie an"/>
+      <min value="1"/>
       <mapping>
-        <identity value="ADT-GEKID" />
-        <language value="DE" />
-        <map value="ST:ST_Intention, SYST:SYST_Intention " />
-        <comment value="ST:ST_Intention, SYST:SYST_Intention " />
+        <identity value="ADT-GEKID"/>
+        <language value="DE"/>
+        <map value="ST:ST_Intention, SYST:SYST_Intention "/>
+        <comment value="ST:ST_Intention, SYST:SYST_Intention "/>
       </mapping>
       <mapping>
-        <identity value="ISO-11179" />
-        <language value="DE" />
-        <map value="urn:dktk:dataelement:67:2, urn:dktk:dataelement:69:2" />
-        <comment value="urn:dktk:dataelement:67:2, urn:dktk:dataelement:69:2" />
+        <identity value="ISO-11179"/>
+        <language value="DE"/>
+        <map value="urn:dktk:dataelement:67:2, urn:dktk:dataelement:69:2"/>
+        <comment value="urn:dktk:dataelement:67:2, urn:dktk:dataelement:69:2"/>
       </mapping>
     </element>
   </differential>

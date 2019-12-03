@@ -1,0 +1,12 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="SampleMaterialType"/>
+  <url value="https://fhir.bbmri.de/ValueSet/SampleMaterialType"/>
+  <name value="SampleMaterialType"/>
+  <title value="Sample Material Type"/>
+  <status value="draft"/>
+  <compose>
+    <include>
+      <system value="https://fhir.bbmri.de/CodeSystem/SampleMaterialType"/>
+    </include>
+  </compose>
+</ValueSet>

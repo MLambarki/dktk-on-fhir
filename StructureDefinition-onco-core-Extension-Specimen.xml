@@ -1,4 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?><StructureDefinition xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://hl7.org/fhir ../fhir-all-xsd/fhir-single.xsd"
+  xmlns="http://hl7.org/fhir">
   <url value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Extension-Specimen"/>
   <version value="0.1.0"/>
   <name value="Specimen"/>
@@ -18,30 +21,30 @@
   <derivation value="constraint"/>
   <differential>
     <element id="Extension">
-      <path value="Extension" />
-      <short value="Referenz zur Probe" />
-      <definition value="Referenz zur Probe/Specimen (GBA-Profil)" />
-      <min value="0" />
-      <max value="*" />
+      <path value="Extension"/>
+      <short value="Referenz zur Probe"/>
+      <definition value="Referenz zur Probe/Specimen (GBA-Profil)"/>
+      <min value="0"/>
+      <max value="*"/>
     </element>
     <element id="Extension.extension">
-      <path value="Extension.extension" />
-      <min value="0" />
-      <max value="0" />
+      <path value="Extension.extension"/>
+      <min value="0"/>
+      <max value="0"/>
     </element>
     <element id="Extension.url">
-      <path value="Extension.url" />
+      <path value="Extension.url"/>
       <type>
-        <code value="uri" />
+        <code value="uri"/>
       </type>
-      <fixedUri value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Extension-Specimen" />
+      <fixedUri value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Extension-Specimen"/>
     </element>
     <element id="Extension.value[x]">
-      <path value="Extension.value[x]" />
+      <path value="Extension.value[x]"/>
       <type>
-        <code value="Reference" />
+        <code value="Reference"/>
         <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Specimen-Gba"/>
-        <aggregation value="referenced" />
+        <aggregation value="referenced"/>
       </type>
     </element>
   </differential>

@@ -1,268 +1,278 @@
-<?xml version="1.0" encoding="utf-8"?>
-<StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Observation-TNMSymbol" />
-  <version value="0.1.0" />
-  <name value="TNMSymbol" />
-  <status value="draft" />
-  <fhirVersion value="4.0.0" />
-  <kind value="resource" />
-  <abstract value="false" />
-  <type value="Observation" />
-  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Observation" />
-  <derivation value="constraint" />
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://hl7.org/fhir ../fhir-all-xsd/fhir-single.xsd"
+  xmlns="http://hl7.org/fhir">
+  <url value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Observation-TNMSymbol"/>
+  <version value="0.1.0"/>
+  <name value="TNMSymbol"/>
+  <status value="draft"/>
+  <fhirVersion value="4.0.0"/>
+  <kind value="resource"/>
+  <abstract value="false"/>
+  <type value="Observation"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Observation"/>
+  <derivation value="constraint"/>
   <differential>
     <element id="Observation.category.coding.system">
-      <path value="Observation.category.coding.system" />
-      <min value="1" />
-      <fixedUri value="http://hl7.org/fhir/observation-category" />
+      <path value="Observation.category.coding.system"/>
+      <min value="1"/>
+      <fixedUri value="http://hl7.org/fhir/observation-category"/>
     </element>
     <element id="Observation.category.coding.code">
-      <path value="Observation.category.coding.code" />
-      <min value="1" />
-      <fixedCode value="laboratory" />
+      <path value="Observation.category.coding.code"/>
+      <min value="1"/>
+      <fixedCode value="laboratory"/>
     </element>
     <element id="Observation.code.coding.system">
-      <path value="Observation.code.coding.system" />
-      <min value="1" />
-      <fixedUri value="http://loinc.org" />
+      <path value="Observation.code.coding.system"/>
+      <min value="1"/>
+      <fixedUri value="http://loinc.org"/>
     </element>
     <element id="Observation.code.coding.code">
-      <path value="Observation.code.coding.code" />
-      <min value="1" />
-      <fixedCode value="21900-TODO" />
+      <path value="Observation.code.coding.code"/>
+      <min value="1"/>
+      <fixedCode value="21900-TODO"/>
     </element>
     <element id="Observation.subject">
-      <path value="Observation.subject" />
-      <min value="1" />
+      <path value="Observation.subject"/>
+      <min value="1"/>
       <type>
-        <code value="Reference" />
-        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Patient-Patient" />
-        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Patient-Pseudonym" />
+        <code value="Reference"/>
+        <targetProfile
+          value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Patient-Patient"/>
+        <targetProfile
+          value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Patient-Pseudonym"/>
       </type>
     </element>
     <element id="Observation.focus">
-      <path value="Observation.focus" />
-      <max value="0" />
+      <path value="Observation.focus"/>
+      <max value="0"/>
     </element>
     <element id="Observation.encounter">
-      <path value="Observation.encounter" />
+      <path value="Observation.encounter"/>
       <type>
-        <code value="Reference" />
-        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Encounter-Encounter" />
+        <code value="Reference"/>
+        <targetProfile
+          value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Encounter-Encounter"/>
       </type>
     </element>
     <element id="Observation.effective[x]">
-      <path value="Observation.effective[x]" />
-      <short value="effectiveDateTime" />
+      <path value="Observation.effective[x]"/>
+      <short value="effectiveDateTime"/>
       <type>
-        <code value="dateTime" />
+        <code value="dateTime"/>
       </type>
     </element>
     <element id="Observation.performer">
-      <path value="Observation.performer" />
-      <max value="0" />
+      <path value="Observation.performer"/>
+      <max value="0"/>
     </element>
     <element id="Observation.value[x]:valueCodeableConcept">
-      <path value="Observation.value[x]" />
-      <sliceName value="valueCodeableConcept" />
-      <max value="0" />
+      <path value="Observation.value[x]"/>
+      <sliceName value="valueCodeableConcept"/>
+      <max value="0"/>
       <type>
-        <code value="CodeableConcept" />
+        <code value="CodeableConcept"/>
       </type>
     </element>
     <element id="Observation.dataAbsentReason">
-      <path value="Observation.dataAbsentReason" />
-      <max value="0" />
+      <path value="Observation.dataAbsentReason"/>
+      <max value="0"/>
     </element>
     <element id="Observation.interpretation">
-      <path value="Observation.interpretation" />
-      <max value="0" />
+      <path value="Observation.interpretation"/>
+      <max value="0"/>
     </element>
     <element id="Observation.bodySite">
-      <path value="Observation.bodySite" />
-      <max value="0" />
+      <path value="Observation.bodySite"/>
+      <max value="0"/>
     </element>
     <element id="Observation.device">
-      <path value="Observation.device" />
-      <max value="0" />
+      <path value="Observation.device"/>
+      <max value="0"/>
     </element>
     <element id="Observation.referenceRange">
-      <path value="Observation.referenceRange" />
-      <max value="0" />
+      <path value="Observation.referenceRange"/>
+      <max value="0"/>
     </element>
     <element id="Observation.hasMember">
-      <path value="Observation.hasMember" />
-      <max value="0" />
+      <path value="Observation.hasMember"/>
+      <max value="0"/>
     </element>
     <element id="Observation.derivedFrom">
-      <path value="Observation.derivedFrom" />
-      <max value="0" />
+      <path value="Observation.derivedFrom"/>
+      <max value="0"/>
     </element>
     <element id="Observation.component">
-      <path value="Observation.component" />
+      <path value="Observation.component"/>
       <slicing>
         <discriminator>
-          <type value="value" />
-          <path value="code" />
+          <type value="value"/>
+          <path value="code"/>
         </discriminator>
-        <rules value="open" />
+        <rules value="open"/>
       </slicing>
     </element>
     <element id="Observation.component:TNM-y-Symbol">
-      <path value="Observation.component" />
-      <sliceName value="TNM-y-Symbol" />
-      <max value="1" />
+      <path value="Observation.component"/>
+      <sliceName value="TNM-y-Symbol"/>
+      <max value="1"/>
     </element>
     <element id="Observation.component:TNM-y-Symbol.code.coding.system">
-      <path value="Observation.component.code.coding.system" />
-      <fixedUri value="http://loinc.org" />
+      <path value="Observation.component.code.coding.system"/>
+      <fixedUri value="http://loinc.org"/>
     </element>
     <element id="Observation.component:TNM-y-Symbol.code.coding.code">
-      <path value="Observation.component.code.coding.code" />
-      <min value="1" />
-      <fixedCode value="59479-6" />
+      <path value="Observation.component.code.coding.code"/>
+      <min value="1"/>
+      <fixedCode value="59479-6"/>
       <binding>
-        <strength value="required" />
-        <description value="Gibt an, ob die Klassifikation während oder nach initialer multimodaler Therapie erfolgt." />
-        <valueSet value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/TNMySymbolVS" />
+        <strength value="required"/>
+        <description
+          value="Gibt an, ob die Klassifikation während oder nach initialer multimodaler Therapie erfolgt."/>
+        <valueSet value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/TNMySymbolVS"/>
       </binding>
     </element>
     <element id="Observation.component:TNM-y-Symbol.value[x]">
-      <path value="Observation.component.value[x]" />
-      <short value="Kennzeichnet Vorhandensein multipler Primärtumoren in einem Bezirk" />
-      <definition value="Kennzeichnet Vorhandensein multipler Primärtumoren in einem Bezirk&#xD;&#xA;(m) = multiple Tumoren ohne Angabe der Zahl&#xD;&#xA;(Zahl) = Anzahl der multiplen Tumoren" />
-      <min value="1" />
+      <path value="Observation.component.value[x]"/>
+      <short value="TNM-y-Symbol"/>
+      <definition
+        value="Gibt an, wann im Fall multimodaler Therapien mit vielfältigen Behandlungsansätzen die Klassifikation während oder nach diesen Therapien erfolgte"/>
+      <min value="1"/>
       <type>
-        <code value="CodeableConcept" />
+        <code value="CodeableConcept"/>
       </type>
       <binding>
-        <strength value="required" />
-        <description value="TNM y-Symbol" />
-        <valueSet value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/TNMySymbolVS" />
+        <strength value="required"/>
+        <description value="TNM y-Symbol"/>
+        <valueSet value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/TNMySymbolVS"/>
       </binding>
       <mapping>
-        <identity value="ADT-GEKID" />
-        <language value="DE" />
-        <map value="TNM:TNM_y_Symbol" />
-        <comment value="TNM:TNM_y_Symbol" />
+        <identity value="ADT-GEKID"/>
+        <language value="DE"/>
+        <map value="TNM:TNM_y_Symbol"/>
+        <comment value="TNM:TNM_y_Symbol"/>
       </mapping>
       <mapping>
-        <identity value="ISO-11179" />
-        <language value="DE" />
-        <map value="urn:dktk:dataelement:82:1" />
+        <identity value="ISO-11179"/>
+        <language value="DE"/>
+        <map value="urn:dktk:dataelement:82:1"/>
       </mapping>
     </element>
     <element id="Observation.component:TNM-y-Symbol.dataAbsentReason">
-      <path value="Observation.component.dataAbsentReason" />
-      <max value="0" />
+      <path value="Observation.component.dataAbsentReason"/>
+      <max value="0"/>
     </element>
     <element id="Observation.component:TNM-y-Symbol.interpretation">
-      <path value="Observation.component.interpretation" />
-      <max value="0" />
+      <path value="Observation.component.interpretation"/>
+      <max value="0"/>
     </element>
     <element id="Observation.component:TNM-y-Symbol.referenceRange">
-      <path value="Observation.component.referenceRange" />
-      <max value="0" />
+      <path value="Observation.component.referenceRange"/>
+      <max value="0"/>
     </element>
     <element id="Observation.component:TNM-r-Symbol">
-      <path value="Observation.component" />
-      <sliceName value="TNM-r-Symbol" />
-      <max value="1" />
+      <path value="Observation.component"/>
+      <sliceName value="TNM-r-Symbol"/>
+      <max value="1"/>
     </element>
     <element id="Observation.component:TNM-r-Symbol.code.coding.system">
-      <path value="Observation.component.code.coding.system" />
-      <fixedUri value="http://loinc.org" />
+      <path value="Observation.component.code.coding.system"/>
+      <fixedUri value="http://loinc.org"/>
     </element>
     <element id="Observation.component:TNM-r-Symbol.code.coding.code">
-      <path value="Observation.component.code.coding.code" />
-      <min value="1" />
-      <fixedCode value="21983-2" />
+      <path value="Observation.component.code.coding.code"/>
+      <min value="1"/>
+      <fixedCode value="21983-2"/>
       <binding>
-        <strength value="required" />
-        <description value="Gibt an, ob die Klassifikation während oder nach initialer multimodaler Therapie erfolgt." />
-        <valueSet value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/TNMrSymbolVS" />
+        <strength value="required"/>
+        <description
+          value="Gibt an, ob die Klassifikation während oder nach initialer multimodaler Therapie erfolgt."/>
+        <valueSet value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/TNMrSymbolVS"/>
       </binding>
     </element>
     <element id="Observation.component:TNM-r-Symbol.value[x]">
-      <path value="Observation.component.value[x]" />
-      <short value="Gibt an, ob es sich bei dem Tumor um ein beurteiltes Rezidiv handelt" />
-      <min value="1" />
+      <path value="Observation.component.value[x]"/>
+      <short value="TNM-r-Symbol"/>
+      <definition value="Gibt an, ob es sich bei dem Tumor um ein beurteiltes Rezidiv handelt"/>
+      <min value="1"/>
       <type>
-        <code value="CodeableConcept" />
+        <code value="CodeableConcept"/>
       </type>
       <binding>
-        <strength value="required" />
-        <description value="TNM r-Symbol" />
-        <valueSet value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/TNMrSymbolVS" />
+        <strength value="required"/>
+        <description value="TNM r-Symbol"/>
+        <valueSet value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/TNMrSymbolVS"/>
       </binding>
       <mapping>
-        <identity value="ADT-GEKID" />
-        <language value="DE" />
-        <map value="TNM:TNM_r_Symbol" />
-        <comment value="TNM:TNM_r_Symbol" />
+        <identity value="ADT-GEKID"/>
+        <language value="DE"/>
+        <map value="TNM:TNM_r_Symbol"/>
+        <comment value="TNM:TNM_r_Symbol"/>
       </mapping>
       <mapping>
-        <identity value="ISO-11179" />
-        <language value="DE" />
-        <map value="urn:dktk:dataelement:81:1" />
+        <identity value="ISO-11179"/>
+        <language value="DE"/>
+        <map value="urn:dktk:dataelement:81:1"/>
       </mapping>
     </element>
     <element id="Observation.component:TNM-r-Symbol.dataAbsentReason">
-      <path value="Observation.component.dataAbsentReason" />
-      <max value="0" />
+      <path value="Observation.component.dataAbsentReason"/>
+      <max value="0"/>
     </element>
     <element id="Observation.component:TNM-r-Symbol.interpretation">
-      <path value="Observation.component.interpretation" />
-      <max value="0" />
+      <path value="Observation.component.interpretation"/>
+      <max value="0"/>
     </element>
     <element id="Observation.component:TNM-r-Symbol.referenceRange">
-      <path value="Observation.component.referenceRange" />
-      <max value="0" />
+      <path value="Observation.component.referenceRange"/>
+      <max value="0"/>
     </element>
     <element id="Observation.component:TNM-m-Symbol">
-      <path value="Observation.component" />
-      <sliceName value="TNM-m-Symbol" />
-      <max value="1" />
+      <path value="Observation.component"/>
+      <sliceName value="TNM-m-Symbol"/>
+      <max value="1"/>
     </element>
     <element id="Observation.component:TNM-m-Symbol.code.coding.system">
-      <path value="Observation.component.code.coding.system" />
-      <fixedUri value="http://loinc.org" />
+      <path value="Observation.component.code.coding.system"/>
+      <fixedUri value="http://loinc.org"/>
     </element>
     <element id="Observation.component:TNM-m-Symbol.code.coding.code">
-      <path value="Observation.component.code.coding.code" />
-      <fixedCode value="TODO" />
+      <path value="Observation.component.code.coding.code"/>
+      <fixedCode value="TODO"/>
     </element>
     <element id="Observation.component:TNM-m-Symbol.value[x]">
-      <path value="Observation.component.value[x]" />
-      <short value="Kennzeichnet Vorhandensein multipler Primärtumoren in einem Bezirk" />
-      <definition value="Kennzeichnet Vorhandensein multipler Primärtumoren in einem Bezirk&#xD;&#xA;(m) = multiple Tumoren ohne Angabe der Zahl&#xD;&#xA;(Zahl) = Anzahl der multiplen Tumoren" />
-      <min value="1" />
+      <path value="Observation.component.value[x]"/>
+      <short value="TNM-m-Symbol"/>
+      <definition value="Gibt an, ob multiple Primärtumoren in einem Bezirk vorliegen"/>
+      <min value="1"/>
       <type>
-        <code value="string" />
+        <code value="string"/>
       </type>
       <mapping>
-        <identity value="ADT-GEKID" />
-        <language value="DE" />
-        <map value="TNM:TNM_m_Symbol" />
-        <comment value="TNM:TNM_m_Symbol" />
+        <identity value="ADT-GEKID"/>
+        <language value="DE"/>
+        <map value="TNM:TNM_m_Symbol"/>
+        <comment value="TNM:TNM_m_Symbol"/>
       </mapping>
       <mapping>
-        <identity value="ISO-11179" />
-        <language value="DE" />
-        <map value="urn:dktk:dataelement:10:2" />
+        <identity value="ISO-11179"/>
+        <language value="DE"/>
+        <map value="urn:dktk:dataelement:10:2"/>
       </mapping>
     </element>
     <element id="Observation.component:TNM-m-Symbol.dataAbsentReason">
-      <path value="Observation.component.dataAbsentReason" />
-      <max value="0" />
+      <path value="Observation.component.dataAbsentReason"/>
+      <max value="0"/>
     </element>
     <element id="Observation.component:TNM-m-Symbol.interpretation">
-      <path value="Observation.component.interpretation" />
-      <max value="0" />
+      <path value="Observation.component.interpretation"/>
+      <max value="0"/>
     </element>
     <element id="Observation.component:TNM-m-Symbol.referenceRange">
-      <path value="Observation.component.referenceRange" />
-      <max value="0" />
+      <path value="Observation.component.referenceRange"/>
+      <max value="0"/>
     </element>
   </differential>
 </StructureDefinition>

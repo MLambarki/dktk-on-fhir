@@ -1,0 +1,146 @@
+
+<StructureDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://hl7.org/fhir ../fhir-all-xsd/fhir-single.xsd"
+  xmlns="http://hl7.org/fhir">
+  <url value="https://fhir.bbmri.de/StructureDefinition/Specimen"/>
+  <name value="Specimen"/>
+  <status value="draft"/>
+  <fhirVersion value="4.0.0"/>
+  <kind value="resource"/>
+  <abstract value="false"/>
+  <type value="Specimen"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Specimen"/>
+  <derivation value="constraint"/>
+  <differential>
+    <element id="Specimen.extension">
+      <path value="Specimen.extension"/>
+      <slicing>
+        <discriminator>
+          <type value="value"/>
+          <path value="url"/>
+        </discriminator>
+        <rules value="open"/>
+      </slicing>
+    </element>
+    <element id="Specimen.extension:storageTemperature">
+      <path value="Specimen.extension"/>
+      <sliceName value="storageTemperature"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="https://fhir.bbmri.de/StructureDefinition/StorageTemperature"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Specimen.extension:diagnosis">
+      <path value="Specimen.extension"/>
+      <sliceName value="diagnosis"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="https://fhir.bbmri.de/StructureDefinition/SampleDiagnosis"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Specimen.extension:custodian">
+      <path value="Specimen.extension"/>
+      <sliceName value="custodian"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="https://fhir.bbmri.de/StructureDefinition/Custodian"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Specimen.type">
+      <path value="Specimen.type"/>
+      <short value="Probentyp"/>
+      <definition value="Gibt den Typ des Biomaterials an"/>
+      <mustSupport value="true"/>
+      <binding>
+        <strength value="required"/>
+        <valueSet value="https://fhir.bbmri.de/ValueSet/SampleMaterialType"/>
+      </binding>
+      <mapping>
+        <identity value="ISO-11179"/>
+        <language value="DE"/>
+        <map value="urn:dktk:dataelement:97:1, urn:dktk:dataelement:90:1, urn:dktk:dataelement:95:2"/>
+        <comment
+          value="urn:dktk:dataelement:97:1, urn:dktk:dataelement:90:1, urn:dktk:dataelement:95:2"/>
+      </mapping>
+    </element>
+    <element id="Specimen.subject">
+      <path value="Specimen.subject"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="https://fhir.bbmri.de/StructureDefinition/Patient"/>
+        <targetProfile
+          value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Patient-Patient"/>
+        <targetProfile
+          value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Patient-Pseudonym"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Specimen.subject.identifier">
+      <path value="Specimen.subject.identifier"/>
+      <max value="0"/>
+    </element>
+    <element id="Specimen.subject.display">
+      <path value="Specimen.subject.display"/>
+      <max value="0"/>
+    </element>
+    <element id="Specimen.request">
+      <path value="Specimen.request"/>
+      <max value="0"/>
+    </element>
+    <element id="Specimen.collection">
+      <path value="Specimen.collection"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Specimen.collection.collector">
+      <path value="Specimen.collection.collector"/>
+      <max value="0"/>
+    </element>
+    <element id="Specimen.collection.collected[x]">
+      <path value="Specimen.collection.collected[x]"/>
+      <short value="Entnahmedatum"/>
+      <definition value="Wann wurde die Probe entnommen (Entnahme-/Eingangsdatum)"/>
+      <type>
+        <code value="dateTime"/>
+      </type>
+      <mustSupport value="true"/>
+      <mapping>
+        <identity value="ISO-11179"/>
+        <language value="DE"/>
+        <map value="urn:dktk:dataelement:49:4"/>
+        <comment value="urn:dktk:dataelement:49:4"/>
+      </mapping>
+    </element>
+    <element id="Specimen.collection.quantity">
+      <path value="Specimen.collection.quantity"/>
+      <max value="0"/>
+    </element>
+    <element id="Specimen.collection.method">
+      <path value="Specimen.collection.method"/>
+      <max value="0"/>
+    </element>
+    <element id="Specimen.collection.bodySite">
+      <path value="Specimen.collection.bodySite"/>
+      <mustSupport value="true"/>
+      <binding>
+        <strength value="required"/>
+        <description value="ICD-O topography codes"/>
+        <valueSet
+          value="http://art-decor.org/fhir/ValueSet/1.3.6.1.4.1.19376.1.3.11.36--20151113191623"/>
+      </binding>
+    </element>
+    <element id="Specimen.collection.fastingStatus[x]">
+      <path value="Specimen.collection.fastingStatus[x]"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <mustSupport value="true"/>
+      <binding>
+        <strength value="required"/>
+      </binding>
+    </element>
+  </differential>
+</StructureDefinition>

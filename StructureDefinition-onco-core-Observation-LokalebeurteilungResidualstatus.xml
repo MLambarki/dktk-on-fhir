@@ -1,5 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?><StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Observation-LokalebeurteilungResidualstatus"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://hl7.org/fhir ../fhir-all-xsd/fhir-single.xsd"
+  xmlns="http://hl7.org/fhir">
+  <url
+    value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Observation-LokalebeurteilungResidualstatus"/>
   <version value="0.1.0"/>
   <name value="LokalebeurteilungResidualstatus"/>
   <status value="draft"/>
@@ -35,8 +39,10 @@
       <min value="1"/>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Patient-Patient"/>
-        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Patient-Pseudonym" />
+        <targetProfile
+          value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Patient-Patient"/>
+        <targetProfile
+          value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Patient-Pseudonym"/>
       </type>
     </element>
     <element id="Observation.focus">
@@ -47,7 +53,8 @@
       <path value="Observation.encounter"/>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Encounter-Encounter"/>
+        <targetProfile
+          value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Encounter-Encounter"/>
       </type>
     </element>
     <element id="Observation.effective[x]">
@@ -62,18 +69,21 @@
       <max value="0"/>
     </element>
     <element id="Observation.value[x]">
-      <path value="Observation.value[x]" />
+      <path value="Observation.value[x]"/>
+      <short value="Lokale Beurteilung Resttumor"/>
+      <definition
+        value="Gibt die lokale Beurteilung (R-Klassifikation lokal) des zurückgebliebenen Resttumors nach Resektion meist des Primärtumors aber z.B. auch Lebermetastasen an"/>
       <mapping>
-        <identity value="ADT-GEKID" />
-        <language value="DE" />
-        <map value="Residualstatus:Lokale_Beurteilung_Residualstatus" />
-        <comment value="Residualstatus:Lokale_Beurteilung_Residualstatus" />
+        <identity value="ADT-GEKID"/>
+        <language value="DE"/>
+        <map value="Residualstatus:Lokale_Beurteilung_Residualstatus"/>
+        <comment value="Residualstatus:Lokale_Beurteilung_Residualstatus"/>
       </mapping>
       <mapping>
-        <identity value="ISO-11179" />
-        <language value="DE" />
-        <map value="urn:dktk:dataelement:19:2" />
-        <comment value="urn:dktk:dataelement:19:2" />
+        <identity value="ISO-11179"/>
+        <language value="DE"/>
+        <map value="urn:dktk:dataelement:19:2"/>
+        <comment value="urn:dktk:dataelement:19:2"/>
       </mapping>
     </element>
     <element id="Observation.value[x]:valueCodeableConcept">

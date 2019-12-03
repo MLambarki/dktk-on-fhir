@@ -1,4 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?><StructureDefinition xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://hl7.org/fhir ../fhir-all-xsd/fhir-single.xsd"
+  xmlns="http://hl7.org/fhir">
   <url value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Extension-Residualstatus"/>
   <version value="0.1.0"/>
   <name value="Residualstatus"/>
@@ -26,7 +30,8 @@
     <element id="Extension">
       <path value="Extension"/>
       <short value="US Core Race Extension"/>
-      <definition value="Concepts classifying the person into a named category of humans sharing common history, traits, geographical origin or nationality.  The race codes used to represent these concepts are based upon the [CDC Race and Ethnicity Code Set Version 1.0](http://www.cdc.gov/phin/resources/vocabulary/index.html) which includes over 900 concepts for representing race and ethnicity of which 921 reference race.  The race concepts are grouped by and pre-mapped to the 5 OMB race categories: - American Indian or Alaska Native - Asian - Black or African American - Native Hawaiian or Other Pacific Islander - White."/>
+      <definition
+        value="Concepts classifying the person into a named category of humans sharing common history, traits, geographical origin or nationality.  The race codes used to represent these concepts are based upon the [CDC Race and Ethnicity Code Set Version 1.0](http://www.cdc.gov/phin/resources/vocabulary/index.html) which includes over 900 concepts for representing race and ethnicity of which 921 reference race.  The race concepts are grouped by and pre-mapped to the 5 OMB race categories: - American Indian or Alaska Native - Asian - Black or African American - Native Hawaiian or Other Pacific Islander - White."/>
       <max value="1"/>
       <isModifier value="false"/>
     </element>
@@ -52,13 +57,16 @@
     </element>
     <element id="Extension.extension:Lokale_Beurteilung.url">
       <path value="Extension.extension.url"/>
-      <fixedUri value="http://dktk.dkfz.de/fhir/StructureDefinition/residaulstatus/Lokale_Beurteilung"/>
+      <fixedUri
+        value="http://dktk.dkfz.de/fhir/StructureDefinition/residaulstatus/Lokale_Beurteilung"/>
     </element>
     <element id="Extension.extension:Lokale_Beurteilung.value[x]">
       <path value="Extension.extension.value[x]"/>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Observation-LokalebeurteilungResidualstatus"/>
+        <targetProfile
+          value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Observation-LokalebeurteilungResidualstatus"
+        />
       </type>
     </element>
     <element id="Extension.extension:Gesamtbeurteilung">
@@ -72,13 +80,16 @@
     </element>
     <element id="Extension.extension:Gesamtbeurteilung.url">
       <path value="Extension.extension.url"/>
-      <fixedUri value="http://dktk.dkfz.de/fhir/StructureDefinition/residaulstatus/Gesamtbeurteilung"/>
+      <fixedUri
+        value="http://dktk.dkfz.de/fhir/StructureDefinition/residaulstatus/Gesamtbeurteilung"/>
     </element>
     <element id="Extension.extension:Gesamtbeurteilung.value[x]">
       <path value="Extension.extension.value[x]"/>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Observation-GesamtbeurteilungResidualstatus"/>
+        <targetProfile
+          value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Observation-GesamtbeurteilungResidualstatus"
+        />
       </type>
     </element>
     <element id="Extension.url">
