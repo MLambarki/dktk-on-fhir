@@ -3,9 +3,9 @@
 <StructureDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://hl7.org/fhir ../fhir-all-xsd/fhir-single.xsd"
   xmlns="http://hl7.org/fhir">
-  <url value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Extension-SYSTIntension"/>
+  <url value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Extension-TherapieIntension"/>
   <version value="0.1.0"/>
-  <name value="SYSTIntension"/>
+  <name value="TherapieIntension"/>
   <status value="draft"/>
   <fhirVersion value="4.0.0"/>
   <kind value="complex-type"/>
@@ -21,7 +21,7 @@
     <element id="Extension.url">
       <path value="Extension.url"/>
       <fixedUri
-        value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Extension-SYSTIntension"/>
+        value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Extension-TherapieIntension"/>
     </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]"/>

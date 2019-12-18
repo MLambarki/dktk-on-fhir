@@ -8,7 +8,7 @@
   <status value="draft"/>
   <date value="2019-07-01"/>
   <publisher value="DKTK"/>
-  <description value="Extension: ein Referenz zur Probe"/>
+  <description value="Extension: eine Referenz zur Probe"/>
   <fhirVersion value="4.0.0"/>
   <kind value="complex-type"/>
   <abstract value="false"/>
