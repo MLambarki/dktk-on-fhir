@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Observation-LokalebeurteilungResidualstatus" />
+  <url value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Observation-LokaleBeurteilungResidualstatus" />
   <version value="0.1.0" />
-  <name value="LokalebeurteilungResidualstatus" />
+  <name value="LokaleBeurteilungResidualstatus" />
   <status value="draft" />
   <fhirVersion value="4.0.0" />
   <kind value="resource" />
@@ -53,15 +53,11 @@
       <path value="Observation.subject.reference" />
       <min value="1" />
     </element>
-    <element id="Observation.focus">
-      <path value="Observation.focus" />
-      <max value="0" />
-    </element>
     <element id="Observation.encounter">
       <path value="Observation.encounter" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Encounter-Encounter" />
+        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Encounter-Fall" />
       </type>
     </element>
     <element id="Observation.effective[x]">
@@ -70,10 +66,6 @@
       <type>
         <code value="dateTime" />
       </type>
-    </element>
-    <element id="Observation.performer">
-      <path value="Observation.performer" />
-      <max value="0" />
     </element>
     <element id="Observation.value[x]">
       <path value="Observation.value[x]" />
@@ -87,17 +79,15 @@
       <binding>
         <strength value="required" />
         <description value="Lokale Beurteilung Resttumor" />
-        <valueSet value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/BeurteilungResidualstatusVS" />
+        <valueSet value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/LokaleBeurteilungResidualstatusVS" />
       </binding>
       <mapping>
         <identity value="ADT-GEKID" />
-        <language value="DE" />
         <map value="Residualstatus:Lokale_Beurteilung_Residualstatus" />
         <comment value="Residualstatus:Lokale_Beurteilung_Residualstatus" />
       </mapping>
       <mapping>
         <identity value="ISO-11179" />
-        <language value="DE" />
         <map value="urn:dktk:dataelement:19:2" />
         <comment value="urn:dktk:dataelement:19:2" />
       </mapping>
@@ -106,37 +96,5 @@
       <path value="Observation.value[x].coding.code" />
       <min value="1" />
     </element>
-    <element id="Observation.dataAbsentReason">
-      <path value="Observation.dataAbsentReason" />
-      <max value="0" />
-    </element>
-    <element id="Observation.interpretation">
-      <path value="Observation.interpretation" />
-      <max value="0" />
-    </element>
-    <element id="Observation.bodySite">
-      <path value="Observation.bodySite" />
-      <max value="0" />
-    </element>
-    <element id="Observation.device">
-      <path value="Observation.device" />
-      <max value="0" />
-    </element>
-    <element id="Observation.referenceRange">
-      <path value="Observation.referenceRange" />
-      <max value="0" />
-    </element>
-    <element id="Observation.hasMember">
-      <path value="Observation.hasMember" />
-      <max value="0" />
-    </element>
-    <element id="Observation.derivedFrom">
-      <path value="Observation.derivedFrom" />
-      <max value="0" />
-    </element>
-    <element id="Observation.component">
-      <path value="Observation.component" />
-      <max value="0" />
-    </element>
-  </differential>
+    </differential>
 </StructureDefinition>

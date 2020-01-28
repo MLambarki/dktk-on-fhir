@@ -1,6 +1,5 @@
 
 <StructureDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://hl7.org/fhir ../fhir-all-xsd/fhir-single.xsd"
   xmlns="http://hl7.org/fhir">
   <url value="https://fhir.bbmri.de/StructureDefinition/Specimen"/>
   <name value="Specimen"/>
@@ -61,7 +60,6 @@
       </binding>
       <mapping>
         <identity value="ISO-11179"/>
-        <language value="DE"/>
         <map value="urn:dktk:dataelement:97:1, urn:dktk:dataelement:90:1, urn:dktk:dataelement:95:2"/>
         <comment
           value="urn:dktk:dataelement:97:1, urn:dktk:dataelement:90:1, urn:dktk:dataelement:95:2"/>
@@ -71,7 +69,6 @@
       <path value="Specimen.subject"/>
       <type>
         <code value="Reference"/>
-        <targetProfile value="https://fhir.bbmri.de/StructureDefinition/Patient"/>
         <targetProfile
           value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Patient-Patient"/>
         <targetProfile
@@ -109,7 +106,6 @@
       <mustSupport value="true"/>
       <mapping>
         <identity value="ISO-11179"/>
-        <language value="DE"/>
         <map value="urn:dktk:dataelement:49:4"/>
         <comment value="urn:dktk:dataelement:49:4"/>
       </mapping>

@@ -19,13 +19,11 @@
       <mustSupport value="true" />
       <mapping>
         <identity value="ISO-11179" />
-        <language value="DE" />
         <map value="urn:dktk:dataelement:54:1, urn:dktk:dataelement:91:1" />
         <comment value="abhängig vom type (lokal, global)" />
       </mapping>
       <mapping>
         <identity value="ADT-GEKID" />
-        <language value="DE" />
         <map value="Patienten_Stammdaten@Patient_ID" />
         <comment value="annährend: nur lokale IDs" />
       </mapping>
@@ -47,7 +45,6 @@
       <min value="1" />
       <mapping>
         <identity value="ISO-11179" />
-        <language value="DE" />
         <map value="urn:dktk:dataelement:54:1" />
         <comment value="urn:dktk:dataelement:54:1" />
       </mapping>

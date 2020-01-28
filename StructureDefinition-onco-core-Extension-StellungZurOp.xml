@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <StructureDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://hl7.org/fhir ../fhir-all-xsd/fhir-single.xsd"
+
   xmlns="http://hl7.org/fhir">
   <url value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Extension-StellungZurOp"/>
   <version value="0.1.0"/>
@@ -50,12 +50,10 @@
       <min value="1"/>
       <mapping>
         <identity value="ADT-GEKID"/>
-        <language value="DE"/>
         <map value="ST:ST_Stellung_OP, ST:ST_Stellung_OP"/>
       </mapping>
       <mapping>
         <identity value="ISO-11179"/>
-        <language value="DE"/>
         <map value="urn:dktk:dataelement:68:3, urn:dktk:dataelement:70:3"/>
       </mapping>
     </element>

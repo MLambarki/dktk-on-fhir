@@ -32,7 +32,7 @@
             </concept>
             <concept>
                 <code value="9"/>
-                <display value="&#34;native&#34; Klassifikation"/>
+                <display value="native Klassifikation"/>
             </concept>
         </include>
     </compose>

@@ -57,7 +57,7 @@
       <path value="Observation.encounter" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Encounter-Encounter" />
+        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Encounter-Fall" />
       </type>
     </element>
     <element id="Observation.effective[x]">
@@ -86,44 +86,14 @@
       </binding>
       <mapping>
         <identity value="ADT-GEKID" />
-        <language value="DE" />
         <map value="TNM:TNM_T" />
         <comment value="TNM:TNM_T" />
       </mapping>
       <mapping>
         <identity value="ISO-11179" />
-        <language value="DE" />
         <map value="urn:dktk:dataelement:100:1" />
         <comment value="urn:dktk:dataelement:100:1" />
       </mapping>
-    </element>
-    <element id="Observation.dataAbsentReason">
-      <path value="Observation.dataAbsentReason" />
-      <max value="0" />
-    </element>
-    <element id="Observation.interpretation">
-      <path value="Observation.interpretation" />
-      <max value="0" />
-    </element>
-    <element id="Observation.bodySite">
-      <path value="Observation.bodySite" />
-      <max value="0" />
-    </element>
-    <element id="Observation.device">
-      <path value="Observation.device" />
-      <max value="0" />
-    </element>
-    <element id="Observation.referenceRange">
-      <path value="Observation.referenceRange" />
-      <max value="0" />
-    </element>
-    <element id="Observation.hasMember">
-      <path value="Observation.hasMember" />
-      <max value="0" />
-    </element>
-    <element id="Observation.derivedFrom">
-      <path value="Observation.derivedFrom" />
-      <max value="0" />
     </element>
     <element id="Observation.component">
       <path value="Observation.component" />
@@ -143,28 +113,14 @@
       </binding>
       <mapping>
         <identity value="ADT-GEKID" />
-        <language value="DE" />
         <map value="TNM:TNM_c_p_u_Praefix_T" />
         <comment value="TNM:TNM_c_p_u_Praefix_T" />
       </mapping>
       <mapping>
         <identity value="ISO-11179" />
-        <language value="DE" />
         <map value="urn:dktk:dataelement:78:1" />
         <comment value="urn:dktk:dataelement:78:1" />
       </mapping>
     </element>
-    <element id="Observation.component.dataAbsentReason">
-      <path value="Observation.component.dataAbsentReason" />
-      <max value="0" />
-    </element>
-    <element id="Observation.component.interpretation">
-      <path value="Observation.component.interpretation" />
-      <max value="0" />
-    </element>
-    <element id="Observation.component.referenceRange">
-      <path value="Observation.component.referenceRange" />
-      <max value="0" />
-    </element>
-  </differential>
+    </differential>
 </StructureDefinition>

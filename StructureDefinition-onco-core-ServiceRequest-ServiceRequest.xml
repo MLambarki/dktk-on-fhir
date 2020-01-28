@@ -11,18 +11,6 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/ServiceRequest" />
   <derivation value="constraint" />
   <differential>
-    <element id="ServiceRequest.basedOn">
-      <path value="ServiceRequest.basedOn" />
-      <max value="0" />
-    </element>
-    <element id="ServiceRequest.replaces">
-      <path value="ServiceRequest.replaces" />
-      <max value="0" />
-    </element>
-    <element id="ServiceRequest.requisition">
-      <path value="ServiceRequest.requisition" />
-      <max value="0" />
-    </element>
     <element id="ServiceRequest.status">
       <path value="ServiceRequest.status" />
       <fixedCode value="completed" />
@@ -32,30 +20,6 @@
       <path value="ServiceRequest.intent" />
       <fixedCode value="plan" />
       <mustSupport value="true" />
-    </element>
-    <element id="ServiceRequest.category">
-      <path value="ServiceRequest.category" />
-      <max value="0" />
-    </element>
-    <element id="ServiceRequest.priority">
-      <path value="ServiceRequest.priority" />
-      <max value="0" />
-    </element>
-    <element id="ServiceRequest.doNotPerform">
-      <path value="ServiceRequest.doNotPerform" />
-      <max value="0" />
-    </element>
-    <element id="ServiceRequest.code">
-      <path value="ServiceRequest.code" />
-      <max value="0" />
-    </element>
-    <element id="ServiceRequest.orderDetail">
-      <path value="ServiceRequest.orderDetail" />
-      <max value="0" />
-    </element>
-    <element id="ServiceRequest.quantity[x]">
-      <path value="ServiceRequest.quantity[x]" />
-      <max value="0" />
     </element>
     <element id="ServiceRequest.subject">
       <path value="ServiceRequest.subject" />
@@ -70,80 +34,16 @@
       <path value="ServiceRequest.encounter" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Encounter-Encounter" />
+        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Encounter-Fall" />
       </type>
       <mustSupport value="true" />
-    </element>
-    <element id="ServiceRequest.occurrence[x]">
-      <path value="ServiceRequest.occurrence[x]" />
-      <max value="0" />
-    </element>
-    <element id="ServiceRequest.asNeeded[x]">
-      <path value="ServiceRequest.asNeeded[x]" />
-      <max value="0" />
-    </element>
-    <element id="ServiceRequest.authoredOn">
-      <path value="ServiceRequest.authoredOn" />
-      <max value="0" />
-    </element>
-    <element id="ServiceRequest.requester">
-      <path value="ServiceRequest.requester" />
-      <max value="0" />
-    </element>
-    <element id="ServiceRequest.performerType">
-      <path value="ServiceRequest.performerType" />
-      <max value="0" />
-    </element>
-    <element id="ServiceRequest.performer">
-      <path value="ServiceRequest.performer" />
-      <max value="0" />
-    </element>
-    <element id="ServiceRequest.locationCode">
-      <path value="ServiceRequest.locationCode" />
-      <max value="0" />
-    </element>
-    <element id="ServiceRequest.locationReference">
-      <path value="ServiceRequest.locationReference" />
-      <max value="0" />
-    </element>
-    <element id="ServiceRequest.reasonCode">
-      <path value="ServiceRequest.reasonCode" />
-      <max value="0" />
-    </element>
-    <element id="ServiceRequest.reasonReference">
-      <path value="ServiceRequest.reasonReference" />
-      <max value="0" />
-    </element>
-    <element id="ServiceRequest.insurance">
-      <path value="ServiceRequest.insurance" />
-      <max value="0" />
-    </element>
-    <element id="ServiceRequest.supportingInfo">
-      <path value="ServiceRequest.supportingInfo" />
-      <max value="0" />
     </element>
     <element id="ServiceRequest.specimen">
       <path value="ServiceRequest.specimen" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Specimen-Gba" />
+        <targetProfile value="https://fhir.bbmri.de/StructureDefinition/Specimen" />
       </type>
     </element>
-    <element id="ServiceRequest.bodySite">
-      <path value="ServiceRequest.bodySite" />
-      <max value="0" />
-    </element>
-    <element id="ServiceRequest.note">
-      <path value="ServiceRequest.note" />
-      <max value="0" />
-    </element>
-    <element id="ServiceRequest.patientInstruction">
-      <path value="ServiceRequest.patientInstruction" />
-      <max value="0" />
-    </element>
-    <element id="ServiceRequest.relevantHistory">
-      <path value="ServiceRequest.relevantHistory" />
-      <max value="0" />
-    </element>
-  </differential>
+    </differential>
 </StructureDefinition>

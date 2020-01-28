@@ -9,9 +9,9 @@
             <p>Residualstatus</p>
         </div>
     </text>
-    <url value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/BeurteilungResidualstatusVS"/>
+    <url value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/LokaleBeurteilungResidualstatusVS"/>
     <version value="0.1.0"/>
-    <name value="BeurteilungResidualstatusVS"/>
+    <name value="LokaleBeurteilungResidualstatusVS"/>
     <status value="draft"/>
     <publisher value="DKTK"/>
     <contact>
@@ -24,7 +24,7 @@
     <compose>
         <include>
             <system
-                value="http://dktk.dkfz.de/fhir/onco/core/CodeSystem/BeurteilungResidualstatusCS"/>
+                value="http://dktk.dkfz.de/fhir/onco/core/CodeSystem/LokaleBeurteilungResidualstatusCS"/>
             <concept>
                 <code value="RX"/>
                 <display value="Vorhandensein von Residualtumor kann nicht beurteilt werden"/>

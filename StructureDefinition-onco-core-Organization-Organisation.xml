@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <StructureDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://hl7.org/fhir ../fhir-all-xsd/fhir-single.xsd"
+
   xmlns="http://hl7.org/fhir">
-  <url value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Organization-Organization"/>
+  <url value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Organization-Organisation"/>
   <version value="0.1.0"/>
-  <name value="Organization"/>
+  <name value="Organisation"/>
   <status value="draft"/>
   <fhirVersion value="4.0.0"/>
   <kind value="resource"/>

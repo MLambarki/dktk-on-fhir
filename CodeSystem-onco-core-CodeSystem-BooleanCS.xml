@@ -1,17 +1,17 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ValueSet xmlns="http://hl7.org/fhir">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<CodeSystem xmlns="http://hl7.org/fhir">
     <text>
         <status value="generated"/>
         <div xmlns="http://www.w3.org/1999/xhtml">
             <p>
-                <b>Boolean ValueSet</b>
+                <b>Boolean CodeSystem</b>
             </p>
             <p>true/false/t/f</p>
         </div>
     </text>
-    <url value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/BooleanVS"/>
-    <version value="0.1.0"/>
-    <name value="BooleanVS"/>
+    <url value="http://dktk.dkfz.de/fhir/onco/core/CodeSystem/BooleanCS"/>
+    <version value="0.0.1"/>
+    <name value="BooleanCS"/>
     <status value="draft"/>
     <publisher value="DKTK"/>
     <contact>
@@ -20,11 +20,11 @@
             <value value="https://dktk.dkfz.de"/>
         </telecom>
     </contact>
-    <description value="Ja / Nein / Unbekannt"/>
-    <immutable value="false"/>
-    <compose>
-        <include>
-            <system value="http://dktk.dkfz.de/fhir/onco/core/CodeSystem/BooleanCS"/>
+    <description value="true/false/t/f"/>
+    <caseSensitive value="true"/>
+    <compositional value="false"/>
+    <content value="complete"/>
+    <count value="4"/>
             <concept>
                 <code value="t"/>
                 <display value="Ja"/>
@@ -41,6 +41,4 @@
                 <code value="false"/>
                 <display value="Nein"/>
             </concept>
-        </include>
-    </compose>
-</ValueSet>
+</CodeSystem>

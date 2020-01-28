@@ -1,6 +1,6 @@
 
 <StructureDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://hl7.org/fhir ../fhir-all-xsd/fhir-single.xsd"
+
   xmlns="http://hl7.org/fhir">
   <url value="https://fhir.bbmri.de/StructureDefinition/Collection"/>
   <name value="Collection"/>

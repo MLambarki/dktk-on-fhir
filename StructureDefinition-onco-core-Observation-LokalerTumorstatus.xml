@@ -49,15 +49,11 @@
       </type>
       <mustSupport value="true" />
     </element>
-    <element id="Observation.focus">
-      <path value="Observation.focus" />
-      <max value="0" />
-    </element>
     <element id="Observation.encounter">
       <path value="Observation.encounter" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Encounter-Encounter" />
+        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Encounter-Fall" />
       </type>
     </element>
     <element id="Observation.effective[x]">
@@ -69,20 +65,14 @@
       </type>
       <mapping>
         <identity value="ADT-GEKID" />
-        <language value="DE" />
         <map value="Untersuchungsdatum_Verlauf &amp; Verlauf_Lokaler_Tumorstatus = R (= Lokalrezidiv)" />
         <comment value="Untersuchungsdatum_Verlauf" />
       </mapping>
       <mapping>
         <identity value="ISO-11179" />
-        <language value="DE" />
         <map value="urn:dktk:dataelement:43:3" />
         <comment value="urn:dktk:dataelement:43:3" />
       </mapping>
-    </element>
-    <element id="Observation.performer">
-      <path value="Observation.performer" />
-      <max value="0" />
     </element>
     <element id="Observation.value[x]">
       <path value="Observation.value[x]" />
@@ -98,13 +88,11 @@
       </binding>
       <mapping>
         <identity value="ADT-GEKID" />
-        <language value="DE" />
         <map value="Verlauf:Verlauf_Lokaler_Tumorstatus" />
         <comment value="Verlauf:Verlauf_Lokaler_Tumorstatus" />
       </mapping>
       <mapping>
         <identity value="ISO-11179" />
-        <language value="DE" />
         <map value="urn:dktk:dataelement:72:2" />
         <comment value="urn:dktk:dataelement:72:2" />
       </mapping>
@@ -113,37 +101,5 @@
       <path value="Observation.value[x].coding.code" />
       <min value="1" />
     </element>
-    <element id="Observation.dataAbsentReason">
-      <path value="Observation.dataAbsentReason" />
-      <max value="0" />
-    </element>
-    <element id="Observation.interpretation">
-      <path value="Observation.interpretation" />
-      <max value="0" />
-    </element>
-    <element id="Observation.bodySite">
-      <path value="Observation.bodySite" />
-      <max value="0" />
-    </element>
-    <element id="Observation.device">
-      <path value="Observation.device" />
-      <max value="0" />
-    </element>
-    <element id="Observation.referenceRange">
-      <path value="Observation.referenceRange" />
-      <max value="0" />
-    </element>
-    <element id="Observation.hasMember">
-      <path value="Observation.hasMember" />
-      <max value="0" />
-    </element>
-    <element id="Observation.derivedFrom">
-      <path value="Observation.derivedFrom" />
-      <max value="0" />
-    </element>
-    <element id="Observation.component">
-      <path value="Observation.component" />
-      <max value="0" />
-    </element>
-  </differential>
+    </differential>
 </StructureDefinition>

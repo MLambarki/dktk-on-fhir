@@ -9,9 +9,9 @@
             <p>Residualstatus</p>
         </div>
     </text>
-    <url value="http://dktk.dkfz.de/fhir/onco/core/CodeSystem/BeurteilungResidualstatusCS"/>
+    <url value="http://dktk.dkfz.de/fhir/onco/core/CodeSystem/LokaleBeurteilungResidualstatusCS"/>
     <version value="0.1.0"/>
-    <name value="BeurteilungResidualstatusCS"/>
+    <name value="LokaleBeurteilungResidualstatusCS"/>
     <status value="draft"/>
     <publisher value="DKTK"/>
     <contact>

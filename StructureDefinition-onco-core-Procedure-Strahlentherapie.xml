@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Procedure-Strahlentherapie" />
+  <version value="0.1.0" />
+  <name value="Strahlentherapie" />
+  <status value="draft" />
+  <fhirVersion value="4.0.0" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Procedure" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Procedure" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Procedure.extension">
+      <path value="Procedure.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Procedure.extension:StellungZurOp">
+      <path value="Procedure.extension" />
+      <sliceName value="StellungZurOp" />
+      <short value="Strahlentherapie Stellung zu operativer Therapie" />
+      <definition value="Gibt an, in welchem Bezug zu einer operativen Therapie die Bestrahlung steht" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Extension-StellungZurOp" />
+      </type>
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="ADT-GEKID" />
+        <map value="ST:ST_Stellung_OP" />
+        <comment value="ST:ST_Stellung_OP" />
+      </mapping>
+      <mapping>
+        <identity value="ISO-11179" />
+        <map value="urn:dktk:dataelement:68:3" />
+        <comment value="urn:dktk:dataelement:68:3" />
+      </mapping>
+    </element>
+    <element id="Procedure.extension:Intention">
+      <path value="Procedure.extension" />
+      <sliceName value="Intention" />
+      <short value="Intention Strahlentherapie" />
+      <definition value="Gibt die Intention der Strahlentherapie an" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Extension-SYSTIntention" />
+      </type>
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="ADT-GEKID" />
+        <map value="ST:ST_Intention" />
+        <comment value="ST:ST_Intention" />
+      </mapping>
+      <mapping>
+        <identity value="ISO-11179" />
+        <map value="urn:dktk:dataelement:67:2" />
+        <comment value="urn:dktk:dataelement:67:2" />
+      </mapping>
+    </element>
+    <element id="Procedure.category">
+      <path value="Procedure.category" />
+      <min value="1" />
+      <mustSupport value="true" />
+      <binding>
+        <strength value="extensible" />
+        <valueSet value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/SYSTTherapieartVS" />
+      </binding>
+    </element>
+    <element id="Procedure.category.coding">
+      <path value="Procedure.category.coding" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Procedure.category.coding.code">
+      <path value="Procedure.category.coding.code" />
+      <short value="Strahlentherapie" />
+      <definition value="Gibt an, ob der Tumor bestrahlt wurde" />
+      <min value="1" />
+      <fixedCode value="ST" />
+      <mapping>
+        <identity value="ADT-GEKID" />
+        <map value="Bestrahlung:ST_Beginn != NULL" />
+        <comment value="abzuleiten" />
+      </mapping>
+      <mapping>
+        <identity value="ISO-11179" />
+        <map value="urn:dktk:dataelement:34:2" />
+        <comment value="urn:dktk:dataelement:34:2" />
+      </mapping>
+    </element>
+    <element id="Procedure.subject">
+      <path value="Procedure.subject" />
+      <mustSupport value="true" />
+    </element>
+    </differential>
+</StructureDefinition>
