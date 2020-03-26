@@ -5,6 +5,7 @@
   <version value="0.1.0"/>
   <name value="GesamtbeurteilungResidualstatus"/>
   <status value="draft"/>
+  <description value="Gesamtbeurteilung der Residualklassifikation der Erkrankung einschließlich etwaiger Fernmetastasen" />
   <fhirVersion value="4.0.0"/>
   <kind value="complex-type"/>
   <abstract value="false"/>

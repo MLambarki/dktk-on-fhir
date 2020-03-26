@@ -4,6 +4,7 @@
   <version value="0.1.0" />
   <name value="ServiceRequest" />
   <status value="draft" />
+  <description value="Dient der Verknüpfung der Diagnose mit dem Biomaterial. Da diese Verknüpfung bereits durch eine Extension realisiert wurde, wird dieses Profil in den Releases wahrscheinlich entfernt" />
   <fhirVersion value="4.0.0" />
   <kind value="resource" />
   <abstract value="false" />

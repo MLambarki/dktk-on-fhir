@@ -4,6 +4,7 @@
   <version value="0.1.0" />
   <name value="TNMcpuPraefix" />
   <status value="draft" />
+  <description value="Gibt an, ob die Klassifikation klinisch oder pathologisch erfolgte. "/>
   <fhirVersion value="4.0.0" />
   <kind value="complex-type" />
   <abstract value="false" />
@@ -22,7 +23,7 @@
     <element id="Extension.value[x]">
       <path value="Extension.value[x]" />
       <short value="c/p/u Praefix" />
-      <definition value="Gibt an, ob die Klassifikation durch einen Arzt oder Pathologen erfolgt ist" />
+      <definition value="Gibt an, ob die Klassifikation klinisch oder pathologisch erfolgte" />
       <min value="1" />
       <type>
         <code value="CodeableConcept" />

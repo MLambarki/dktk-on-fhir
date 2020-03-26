@@ -7,6 +7,7 @@
   <version value="0.1.0"/>
   <name value="SYSTIntention"/>
   <status value="draft"/>
+  <description value="Gibt die Intention der Therapie an"/>
   <fhirVersion value="4.0.0"/>
   <kind value="complex-type"/>
   <abstract value="false"/>

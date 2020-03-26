@@ -10,7 +10,7 @@
   <status value="draft"/>
   <date value="2019-07-01"/>
   <publisher value="DKTK"/>
-  <description value="Stellung zur Operation"/>
+  <description value="Gibt an, in welchem Bezug zu einer Operation die vorliegende Therapie (Bestrahlung, Chemotherapie etc.) steht" />
   <fhirVersion value="4.0.0"/>
   <kind value="complex-type"/>
   <abstract value="false"/>
@@ -46,7 +46,7 @@
       <path value="Extension.value[x].coding.code"/>
       <short value="Stellung zu operativer Therapie"/>
       <definition
-        value="Gibt an, in welchem Bezug zu einer operativen Therapie die Bestrahlung steht"/>
+        value="Gibt an, in welchem Bezug zu einer Operation die vorliegende Therapie (Bestrahlung, Chemotherapie etc.) steht"/>
       <min value="1"/>
       <mapping>
         <identity value="ADT-GEKID"/>

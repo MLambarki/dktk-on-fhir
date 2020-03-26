@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Observation-UICCTNM-XXXX2ALT" />
+  <url value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Observation-TNMc" />
   <version value="0.1.0" />
-  <name value="UICCTNMXXXX2ALT" />
+  <name value="TNMc" />
   <status value="draft" />
+  <description value="Staging von Tumorerkrankungen nach der TNM-Klassifikation (klinisch) gemäß der aktuellen Ausgabe  AJCC " />
   <fhirVersion value="4.0.0" />
   <kind value="resource" />
   <abstract value="false" />
@@ -37,7 +38,7 @@
     <element id="Observation.code.coding.code">
       <path value="Observation.code.coding.code" />
       <min value="1" />
-      <fixedCode value="21914-7" />
+      <fixedCode value="21908-9" />
     </element>
     <element id="Observation.subject">
       <path value="Observation.subject" />
@@ -128,7 +129,7 @@
       <slicing id="394">
         <discriminator>
           <type value="value" />
-          <path value="coding.code" />
+          <path value="code.coding.code" />
         </discriminator>
         <ordered value="false" />
         <rules value="open" />
@@ -140,13 +141,32 @@
       <max value="1" />
       <mustSupport value="true" />
     </element>
+    <element id="Observation.component:TNM-T.extension">
+      <path value="Observation.component.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Observation.component:TNM-T.extension:TNM-cpu-Praefix">
+      <path value="Observation.component.extension" />
+      <sliceName value="TNM-cpu-Praefix" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Extension-TNMcpuPraefix" />
+      </type>
+    </element>
     <element id="Observation.component:TNM-T.code.coding.system">
       <path value="Observation.component.code.coding.system" />
       <fixedUri value="http://loinc.org" />
     </element>
     <element id="Observation.component:TNM-T.code.coding.code">
       <path value="Observation.component.code.coding.code" />
-      <fixedCode value="21899-0" />
+      <min value="1" />
+      <fixedCode value="21905-5" />
     </element>
     <element id="Observation.component:TNM-T.value[x]">
       <path value="Observation.component.value[x]" />
@@ -178,13 +198,31 @@
       <max value="1" />
       <mustSupport value="true" />
     </element>
+    <element id="Observation.component:TNM-N.extension">
+      <path value="Observation.component.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Observation.component:TNM-N.extension:TNM-cpu-Praefix">
+      <path value="Observation.component.extension" />
+      <sliceName value="TNM-cpu-Praefix" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Extension-TNMcpuPraefix" />
+      </type>
+    </element>
     <element id="Observation.component:TNM-N.code.coding.system">
       <path value="Observation.component.code.coding.system" />
       <fixedUri value="http://loinc.org" />
     </element>
     <element id="Observation.component:TNM-N.code.coding.code">
       <path value="Observation.component.code.coding.code" />
-      <fixedCode value="21900-6" />
+      <fixedCode value="201906-3" />
     </element>
     <element id="Observation.component:TNM-N.value[x]">
       <path value="Observation.component.value[x]" />
@@ -216,13 +254,33 @@
       <max value="1" />
       <mustSupport value="true" />
     </element>
+    <element id="Observation.component:TNM-M.extension">
+      <path value="Observation.component.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Observation.component:TNM-M.extension:TNM-cpu-Praefix">
+      <path value="Observation.component.extension" />
+      <sliceName value="TNM-cpu-Praefix" />
+      <mustSupport value="true" />
+      <max value="1"/>
+      <type>
+        <code value="Extension" />
+        <profile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Extension-TNMcpuPraefix" />
+      </type>
+    </element>
     <element id="Observation.component:TNM-M.code.coding.system">
       <path value="Observation.component.code.coding.system" />
       <fixedUri value="http://loinc.org" />
     </element>
     <element id="Observation.component:TNM-M.code.coding.code">
       <path value="Observation.component.code.coding.code" />
-      <fixedCode value="21901-4" />
+      <fixedCode value="21907-1" />
     </element>
     <element id="Observation.component:TNM-M.value[x]">
       <path value="Observation.component.value[x]" />
@@ -344,16 +402,22 @@
     </element>
     <element id="Observation.component:TNM-m-Symbol.code.coding.code">
       <path value="Observation.component.code.coding.code" />
-      <fixedCode value="TODO" />
+      <min value="1" />
+      <fixedCode value="42030-7" />
     </element>
     <element id="Observation.component:TNM-m-Symbol.value[x]">
       <path value="Observation.component.value[x]" />
       <short value="TNM-m-Symbol" />
-      <definition value="Gibt an, ob multiple Primärtumoren in einem Bezirk vorliegen" />
+      <definition value="Gibt an, ob multiple PrimÃ¤rtumoren in einem Bezirk vorliegen" />
       <min value="1" />
       <type>
-        <code value="string" />
+        <code value="CodeableConcept" />
       </type>
+      <binding>
+        <strength value="required" />
+        <description value="TNM m-Symbol" />
+        <valueSet value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/TNMmSymbolVS" />
+      </binding>
       <mapping>
         <identity value="ADT-GEKID" />
         <map value="TNM:TNM_m_Symbol" />
@@ -364,94 +428,9 @@
         <map value="urn:dktk:dataelement:10:2" />
       </mapping>
     </element>
-    <element id="Observation.component:cpu-T">
-      <path value="Observation.component" />
-      <sliceName value="cpu-T" />
-      <max value="1" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Observation.component:cpu-T.value[x]">
-      <path value="Observation.component.value[x]" />
-      <short value="c/p/u-Präfix T" />
-      <definition value="Gibt an, ob die Klassifikation durch einen Arzt oder Pathologen erfolgt ist für T" />
-      <type>
-        <code value="CodeableConcept" />
-      </type>
-      <binding>
-        <strength value="required" />
-        <description value="c/p/u Praefix" />
-        <valueSet value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/TNMcpuPraefixTVS" />
-      </binding>
-      <mapping>
-        <identity value="ADT-GEKID" />
-        <map value="TNM:TNM_c_p_u_Praefix_T" />
-        <comment value="TNM:TNM_c_p_u_Praefix_T" />
-      </mapping>
-      <mapping>
-        <identity value="ISO-11179" />
-        <map value="urn:dktk:dataelement:78:1" />
-        <comment value="urn:dktk:dataelement:78:1" />
-      </mapping>
-    </element>
-    <element id="Observation.component:ccpu-N">
-      <path value="Observation.component" />
-      <sliceName value="ccpu-N" />
-      <max value="1" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Observation.component:ccpu-N.value[x]">
-      <path value="Observation.component.value[x]" />
-      <short value="c/p/u-Präfix N" />
-      <definition value="Gibt an, ob die Klassifikation durch einen Arzt oder Pathologen erfolgt ist für N" />
-      <type>
-        <code value="CodeableConcept" />
-      </type>
-      <mustSupport value="true" />
-      <binding>
-        <strength value="required" />
-        <description value="c/p/u Praefix" />
-        <valueSet value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/TNMcpuPraefixTVS" />
-      </binding>
-      <mapping>
-        <identity value="ADT-GEKID" />
-        <map value="TNM:TNM_c_p_u_Praefix_N" />
-        <comment value="TNM:TNM_c_p_u_Praefix_N" />
-      </mapping>
-      <mapping>
-        <identity value="ISO-11179" />
-        <map value="urn:dktk:dataelement:79:1" />
-        <comment value="urn:dktk:dataelement:79:1" />
-      </mapping>
-    </element>
-    <element id="Observation.component:cpu-M">
-      <path value="Observation.component" />
-      <sliceName value="cpu-M" />
-      <max value="1" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Observation.component:cpu-M.value[x]">
-      <path value="Observation.component.value[x]" />
-      <short value="c/p/u-Präfix M" />
-      <definition value="Gibt an, ob die Klassifikation durch einen Arzt oder Pathologen erfolgt ist für M" />
-      <type>
-        <code value="CodeableConcept" />
-      </type>
-      <mustSupport value="true" />
-      <binding>
-        <strength value="required" />
-        <description value="c/p/u Praefix" />
-        <valueSet value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/TNMcpuPraefixTVS" />
-      </binding>
-      <mapping>
-        <identity value="ADT-GEKID" />
-        <map value="TNM:TNM_c_p_u_Praefix_M" />
-        <comment value="TNM:TNM_c_p_u_Praefix_M" />
-      </mapping>
-      <mapping>
-        <identity value="ISO-11179" />
-        <map value="urn:dktk:dataelement:80:1" />
-        <comment value="urn:dktk:dataelement:80:1" />
-      </mapping>
+    <element id="Observation.component:TNM-m-Symbol.value[x].coding.code">
+      <path value="Observation.component.value[x].coding.code" />
+      <min value="1" />
     </element>
   </differential>
 </StructureDefinition>

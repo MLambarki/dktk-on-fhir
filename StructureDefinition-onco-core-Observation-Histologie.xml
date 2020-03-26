@@ -4,6 +4,7 @@
   <version value="0.1.0" />
   <name value="Histologie" />
   <status value="draft" />
+  <description value="Gibt an, welche Histologie der Tumor aufweist, basierend auf der aktuellen ICD-O-3 Klassifizierung" />
   <fhirVersion value="4.0.0" />
   <kind value="resource" />
   <abstract value="false" />

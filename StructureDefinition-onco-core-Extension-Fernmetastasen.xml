@@ -5,6 +5,7 @@
   <version value="0.1.0"/>
   <name value="Fernmetastasen"/>
   <status value="draft"/>
+  <description value="Gibt an, ob ein positiver Befund von Fernmetastasen vorliegt" />
   <fhirVersion value="4.0.0"/>
   <kind value="complex-type"/>
   <abstract value="false"/>

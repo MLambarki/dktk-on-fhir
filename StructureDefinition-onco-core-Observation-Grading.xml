@@ -4,6 +4,7 @@
   <version value="0.1.0" />
   <name value="Grading" />
   <status value="draft" />
+  <description value="Gibt den Differenzierungsgrad des Tumors an" />
   <fhirVersion value="4.0.0" />
   <kind value="resource" />
   <abstract value="false" />

@@ -6,6 +6,7 @@
   <version value="0.1.0"/>
   <name value="Fall"/>
   <status value="draft"/>
+  <description value="Encounter bildet lediglich einen Zeitstrahl/Chronologie der verschiedenen Ereignissen (Diagnose, Therapien und Verläufe)" />
   <fhirVersion value="4.0.0"/>
   <kind value="resource"/>
   <abstract value="false"/>

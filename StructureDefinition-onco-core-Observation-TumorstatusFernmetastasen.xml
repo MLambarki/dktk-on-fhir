@@ -4,6 +4,7 @@
   <version value="0.1.0" />
   <name value="TumorstatusFernmetastasen" />
   <status value="draft" />
+  <description value="Beurteilung der Situation im Bereich der Fernmetastasen"/>
   <fhirVersion value="4.0.0" />
   <kind value="resource" />
   <abstract value="false" />

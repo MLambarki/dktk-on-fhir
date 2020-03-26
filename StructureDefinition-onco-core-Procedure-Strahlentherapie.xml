@@ -4,6 +4,7 @@
   <version value="0.1.0" />
   <name value="Strahlentherapie" />
   <status value="draft" />
+  <description value="Ermittlung der Strahlentherapiedaten" />
   <fhirVersion value="4.0.0" />
   <kind value="resource" />
   <abstract value="false" />

@@ -4,6 +4,7 @@
   <version value="0.1.0" />
   <name value="Primaerdiagnose" />
   <status value="draft" />
+  <description value="Entspricht der Primärdiagnose. Dabei werden Parameter zur Klassifikation der Primärerkrankung erfasst. Diese umfassen ICD-10, ICD-O-3 (Topographie) und die Seitenlokalisation. Verknüpfungen mit der Histologie (Topographie) und die TNM-Klassifikationen (pathologisch/klinisch)" />
   <fhirVersion value="4.0.0" />
   <kind value="resource" />
   <abstract value="false" />
@@ -137,7 +138,7 @@
       <path value="Condition.bodySite.coding.system" />
       <short value="ICD-O-3" />
       <min value="1" />
-    <fixedUri value="urn:oid:2.16.840.1.113883.6.43.1" />
+      <fixedUri value="urn:oid:2.16.840.1.113883.6.43.1" />
     </element>
     <element id="Condition.bodySite.coding:ICD-O-3-T.version">
       <path value="Condition.bodySite.coding.version" />
@@ -300,14 +301,15 @@
       <path value="Condition.stage.assessment" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Observation-UICCTNM" />
+        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Observation-TNMp" />
+        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Observation-TNMc" />
       </type>
-    <mustSupport value="true" />
+      <mustSupport value="true" />
     </element>
     <element id="Condition.stage.assessment.reference">
       <path value="Condition.stage.assessment.reference" />
       <min value="1" />
-      </element>
+    </element>
     <element id="Condition.evidence">
       <path value="Condition.evidence" />
       <mustSupport value="true" />
@@ -318,11 +320,11 @@
         <code value="Reference" />
         <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Observation-Histologie" />
       </type>
-    <mustSupport value="true" />
+      <mustSupport value="true" />
     </element>
     <element id="Condition.evidence.detail.reference">
       <path value="Condition.evidence.detail.reference" />
       <min value="1" />
     </element>
-    </differential>
+  </differential>
 </StructureDefinition>

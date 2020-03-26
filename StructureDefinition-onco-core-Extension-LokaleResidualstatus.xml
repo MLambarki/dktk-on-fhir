@@ -5,6 +5,7 @@
   <version value="0.1.0"/>
   <name value="LokaleResidualstatus"/>
   <status value="draft"/>
+  <description value="Gibt die lokale Beurteilung (R-Klassifikation lokal) des zurückgebliebenen Resttumors nach Resektion meist des Primärtumors aber z.B. auch Lebermetastasen an" />
   <fhirVersion value="4.0.0"/>
   <kind value="complex-type"/>
   <abstract value="false"/>

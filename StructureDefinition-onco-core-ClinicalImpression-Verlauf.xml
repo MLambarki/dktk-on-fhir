@@ -4,6 +4,7 @@
   <version value="0.1.0" />
   <name value="Verlauf" />
   <status value="draft" />
+  <description value="Dient zur Erfassung der Follow-ups. Analog zum Verlauf im ADT/GEKID-Datensatz können weitere Parameter für die Entwicklung der Erkrankung (Rezidiverkrankung, Progress) erfasst werden. Dies gilt insbesondere für die TNMs und die Histologie. " />
   <fhirVersion value="4.0.0" />
   <kind value="resource" />
   <abstract value="false" />
@@ -85,6 +86,8 @@
         <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Observation-TumorstatusFernmetastasen" />
         <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Observation-GesamtbeurteilungTumorstatus" />
         <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Observation-Fernmetastasen" />
+        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Observation-TNMp" />
+        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Observation-TNMc" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -93,5 +96,5 @@
       <min value="1" />
       <mustSupport value="true" />
     </element>
-    </differential>
+  </differential>
 </StructureDefinition>
