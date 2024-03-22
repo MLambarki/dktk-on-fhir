@@ -2,9 +2,9 @@
 <StructureDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xmlns="http://hl7.org/fhir">
   <url value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Extension-Fernmetastasen"/>
-  <version value="0.1.0"/>
+  <version value="0.9.0" />
   <name value="Fernmetastasen"/>
-  <status value="draft"/>
+  <status value="active"/>
   <description value="Gibt an, ob ein positiver Befund von Fernmetastasen vorliegt" />
   <fhirVersion value="4.0.0"/>
   <kind value="complex-type"/>

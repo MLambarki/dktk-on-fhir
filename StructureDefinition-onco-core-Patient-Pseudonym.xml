@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <url value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Patient-Pseudonym" />
-  <version value="0.1.0" />
-  <name value="Pseudonym" />
-  <status value="draft" />
+  <version value="0.9.0" />
+  <name value="Patientenpseudonym" />
+  <status value="active" />
   <description value="Ermittlung des Patientenpseudonyms" />
   <fhirVersion value="4.0.0" />
   <kind value="resource" />
@@ -80,14 +80,6 @@
     </element>
     <element id="Patient.address">
       <path value="Patient.address" />
-      <max value="0" />
-    </element>
-    <element id="Patient.maritalStatus">
-      <path value="Patient.maritalStatus" />
-      <max value="0" />
-    </element>
-    <element id="Patient.multipleBirth[x]">
-      <path value="Patient.multipleBirth[x]" />
       <max value="0" />
     </element>
     <element id="Patient.photo">

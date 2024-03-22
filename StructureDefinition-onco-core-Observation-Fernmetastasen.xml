@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <url value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Observation-Fernmetastasen" />
-  <version value="0.1.0" />
+  <version value="0.9.0" />
   <name value="Fernmetastasen" />
-  <status value="draft" />
+  <status value="active" />
   <description value="Gibt an, ob ein positiver Befund von Fernmetastasen vorliegt" />
   <fhirVersion value="4.0.0" />
   <mapping>
@@ -79,6 +79,15 @@
     <element id="Observation.subject.reference">
       <path value="Observation.subject.reference" />
       <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.focus">
+      <path value="Observation.focus" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Resource" />
+        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Condition-Primaerdiagnose" />
+      </type>
       <mustSupport value="true" />
     </element>
     <element id="Observation.encounter">
@@ -160,5 +169,5 @@
         <comment value="urn:dktk:dataelement:98:1" />
       </mapping>
     </element>
-    </differential>
+  </differential>
 </StructureDefinition>

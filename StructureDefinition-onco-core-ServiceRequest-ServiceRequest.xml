@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <url value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-ServiceRequest-ServiceRequest-ServiceRequest" />
-  <version value="0.1.0" />
+  <version value="0.9.0" />
   <name value="ServiceRequest" />
-  <status value="draft" />
+  <status value="active"/>
   <description value="Dient der Verknüpfung der Diagnose mit dem Biomaterial. Da diese Verknüpfung bereits durch eine Extension realisiert wurde, wird dieses Profil in den Releases wahrscheinlich entfernt" />
   <fhirVersion value="4.0.0" />
   <kind value="resource" />

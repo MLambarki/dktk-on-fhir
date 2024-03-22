@@ -10,9 +10,9 @@
         </div>
     </text>
     <url value="http://dktk.dkfz.de/fhir/onco/core/CodeSystem/VitalstatusCS"/>
-    <version value="0.1.0"/>
+    <version value="0.9.0" />
     <name value="VitalstatusCS"/>
-    <status value="draft"/>
+    <status value="active"/>
     <publisher value="DKTK"/>
     <contact>
         <telecom>
@@ -24,7 +24,7 @@
     <caseSensitive value="true"/>
     <compositional value="false"/>
     <content value="complete"/>
-    <count value="2"/>
+    <count value="3"/>
     <concept>
         <code value="lebend"/>
         <display value="lebend"/>
@@ -32,5 +32,9 @@
     <concept>
         <code value="verstorben"/>
         <display value="verstorben"/>
+    </concept>
+    <concept>
+        <code value="unbekannt"/>
+        <display value="unbekannt"/>
     </concept>
 </CodeSystem>

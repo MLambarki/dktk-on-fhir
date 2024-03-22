@@ -10,9 +10,9 @@
         </div>
     </text>
     <url value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/VerlaufTumorstatusFernmetastasenVS"/>
-    <version value="0.1.0"/>
+    <version value="0.9.0" />
     <name value="VerlaufTumorstatusFernmetastasenVS"/>
-    <status value="draft"/>
+    <status value="active"/>
     <publisher value="DKTK"/>
     <contact>
         <telecom>

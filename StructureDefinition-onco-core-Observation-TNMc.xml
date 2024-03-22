@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <url value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Observation-TNMc" />
-  <version value="0.1.0" />
+  <version value="0.9.0" />
   <name value="TNMc" />
-  <status value="draft" />
-  <description value="Staging von Tumorerkrankungen nach der TNM-Klassifikation (klinisch) gemäß der aktuellen Ausgabe  AJCC " />
+  <status value="active" />
+  <description value="Staging von Tumorerkrankungen nach der TNM-Klassifikation (klinisch) gemäß der aktuellen Ausgabe  AJCC" />
   <fhirVersion value="4.0.0" />
   <kind value="resource" />
   <abstract value="false" />
@@ -47,6 +47,15 @@
         <code value="Reference" />
         <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Patient-Patient" />
         <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Patient-Pseudonym" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.focus">
+      <path value="Observation.focus" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Resource" />
+        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Condition-Primaerdiagnose" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -222,7 +231,7 @@
     </element>
     <element id="Observation.component:TNM-N.code.coding.code">
       <path value="Observation.component.code.coding.code" />
-      <fixedCode value="201906-3" />
+      <fixedCode value="21906-3" />
     </element>
     <element id="Observation.component:TNM-N.value[x]">
       <path value="Observation.component.value[x]" />
@@ -267,12 +276,12 @@
     <element id="Observation.component:TNM-M.extension:TNM-cpu-Praefix">
       <path value="Observation.component.extension" />
       <sliceName value="TNM-cpu-Praefix" />
-      <mustSupport value="true" />
-      <max value="1"/>
+      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Extension-TNMcpuPraefix" />
       </type>
+      <mustSupport value="true" />
     </element>
     <element id="Observation.component:TNM-M.code.coding.system">
       <path value="Observation.component.code.coding.system" />
@@ -408,7 +417,7 @@
     <element id="Observation.component:TNM-m-Symbol.value[x]">
       <path value="Observation.component.value[x]" />
       <short value="TNM-m-Symbol" />
-      <definition value="Gibt an, ob multiple PrimÃ¤rtumoren in einem Bezirk vorliegen" />
+      <definition value="Gibt an, ob multiple Primärtumoren in einem Bezirk vorliegen" />
       <min value="1" />
       <type>
         <code value="CodeableConcept" />

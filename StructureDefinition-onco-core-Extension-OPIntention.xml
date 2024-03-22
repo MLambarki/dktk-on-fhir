@@ -3,9 +3,9 @@
 
   xmlns="http://hl7.org/fhir">
   <url value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Extension-OPIntention"/>
-  <version value="0.1.0"/>
+  <version value="0.9.0" />
   <name value="OPIntention"/>
-  <status value="draft"/>
+  <status value="active"/>
   <description value="  Gibt an, mit welchem Ziel die Operation durchgeführt wird" />
   <fhirVersion value="4.0.0"/>
   <kind value="complex-type"/>

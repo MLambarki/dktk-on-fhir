@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <url value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-ClinicalImpression-Verlauf" />
-  <version value="0.1.0" />
+  <version value="0.9.0" />
   <name value="Verlauf" />
-  <status value="draft" />
-  <description value="Dient zur Erfassung der Follow-ups. Analog zum Verlauf im ADT/GEKID-Datensatz können weitere Parameter für die Entwicklung der Erkrankung (Rezidiverkrankung, Progress) erfasst werden. Dies gilt insbesondere für die TNMs und die Histologie. " />
+  <status value="active" />
+  <description value="Dient zur Erfassung der Follow-ups. Analog zum Verlauf im ADT/GEKID-Datensatz können weitere Parameter für die Entwicklung der Erkrankung (Rezidiverkrankung, Progress) erfasst werden. Dies gilt insbesondere für die TNMs und die Histologie." />
   <fhirVersion value="4.0.0" />
   <kind value="resource" />
   <abstract value="false" />
@@ -23,6 +23,7 @@
         <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Patient-Patient" />
         <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Patient-Pseudonym" />
       </type>
+      <mustSupport value="true" />
     </element>
     <element id="ClinicalImpression.encounter">
       <path value="ClinicalImpression.encounter" />
@@ -30,6 +31,7 @@
         <code value="Reference" />
         <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Encounter-Fall" />
       </type>
+      <mustSupport value="true" />
     </element>
     <element id="ClinicalImpression.effective[x]">
       <path value="ClinicalImpression.effective[x]" />
@@ -81,13 +83,19 @@
       <type>
         <code value="Reference" />
         <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Observation-Vitalstatus" />
+        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Observation-TodUrsache" />
         <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Observation-TumorstatusLymphknoten" />
         <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Observation-LokalerTumorstatus" />
         <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Observation-TumorstatusFernmetastasen" />
         <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Observation-GesamtbeurteilungTumorstatus" />
         <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Observation-Fernmetastasen" />
+        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Observation-Histologie" />
+        <targetProfile value="https://fhir.bbmri.de/StructureDefinition/Specimen" />
         <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Observation-TNMp" />
         <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Observation-TNMc" />
+        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Observation-GenetischeVariante" />
+        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Observation-Ecog" />
+        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Observation-WeitereKlassifikation" />
       </type>
       <mustSupport value="true" />
     </element>

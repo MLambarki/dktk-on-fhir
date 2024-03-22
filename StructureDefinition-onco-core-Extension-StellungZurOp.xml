@@ -4,10 +4,10 @@
 
   xmlns="http://hl7.org/fhir">
   <url value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Extension-StellungZurOp"/>
-  <version value="0.1.0"/>
+  <version value="0.9.0" />
   <name value="StellungZurOp"/>
   <title value="Stellung der Therapie zur Operation"/>
-  <status value="draft"/>
+  <status value="active"/>
   <date value="2019-07-01"/>
   <publisher value="DKTK"/>
   <description value="Gibt an, in welchem Bezug zu einer Operation die vorliegende Therapie (Bestrahlung, Chemotherapie etc.) steht" />

@@ -4,9 +4,9 @@
 
   xmlns="http://hl7.org/fhir">
   <url value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Extension-SYSTIntention"/>
-  <version value="0.1.0"/>
+  <version value="0.9.0" />
   <name value="SYSTIntention"/>
-  <status value="draft"/>
+  <status value="active"/>
   <description value="Gibt die Intention der Therapie an"/>
   <fhirVersion value="4.0.0"/>
   <kind value="complex-type"/>

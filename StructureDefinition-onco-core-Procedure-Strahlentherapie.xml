@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <url value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Procedure-Strahlentherapie" />
-  <version value="0.1.0" />
+  <version value="0.9.0" />
   <name value="Strahlentherapie" />
-  <status value="draft" />
+  <status value="active" />
   <description value="Ermittlung der Strahlentherapiedaten" />
   <fhirVersion value="4.0.0" />
   <kind value="resource" />
@@ -65,6 +65,10 @@
         <comment value="urn:dktk:dataelement:67:2" />
       </mapping>
     </element>
+    <element id="Procedure.status">
+      <path value="Procedure.status" />
+      <mustSupport value="true" />
+    </element>
     <element id="Procedure.category">
       <path value="Procedure.category" />
       <min value="1" />
@@ -100,5 +104,67 @@
       <path value="Procedure.subject" />
       <mustSupport value="true" />
     </element>
-    </differential>
+    <element id="Procedure.encounter">
+      <path value="Procedure.encounter" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Encounter" />
+        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Encounter-Fall" />
+      </type>
+    </element>
+    <element id="Procedure.performed[x]">
+      <path value="Procedure.performed[x]" />
+      <type>
+        <code value="Period" />
+      </type>
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="ADT-GEKID" />
+        <map value="ST:Bestrahlung:ST_Beginn_Datum, ST:Bestrahlung:ST_Ende_Datum" />
+        <comment value="ST:Bestrahlung:ST_Beginn_Datum, ST:Bestrahlung:ST_Ende_Datum" />
+      </mapping>
+      <mapping>
+        <identity value="ISO-11179" />
+        <map value="urn:adt:dataelement:77:1, urn:adt:dataelement:78:1" />
+      </mapping>
+    </element>
+    <element id="Procedure.performed[x].start">
+      <path value="Procedure.performed[x].start" />
+      <short value="Strahlentherapie Beginn" />
+      <definition value="Gibt an, wann die Strahlentherapie begonnen wurde" />
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="ADT-GEKID" />
+        <map value="ST:Bestrahlung:ST_Beginn_Datum" />
+        <comment value="ST:Bestrahlung:ST_Beginn_Datum" />
+      </mapping>
+      <mapping>
+        <identity value="ISO-11179" />
+        <map value="urn:adt:dataelement:77:1" />
+      </mapping>
+    </element>
+    <element id="Procedure.performed[x].end">
+      <path value="Procedure.performed[x].end" />
+      <short value="Strahlentherapie Ende" />
+      <definition value="Gibt an, wann die Strahlentherapie beendet wurde" />
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="ADT-GEKID" />
+        <map value="ST:Bestrahlung:ST_Ende_Datum" />
+        <comment value="ST:Bestrahlung:ST_Ende_Datum" />
+      </mapping>
+      <mapping>
+        <identity value="ISO-11179" />
+        <map value="urn:adt:dataelement:78:1" />
+      </mapping>
+    </element>
+    <element id="Procedure.reasonReference">
+      <path value="Procedure.reasonReference" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Condition-Primaerdiagnose" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+  </differential>
 </StructureDefinition>

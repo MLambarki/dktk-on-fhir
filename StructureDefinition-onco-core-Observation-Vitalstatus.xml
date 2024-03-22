@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <url value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Observation-Vitalstatus" />
-  <version value="0.1.0" />
+  <version value="0.9.0" />
   <name value="Vitalstatus" />
-  <status value="draft" />
+  <status value="active" />
   <description value="Ermittlung des Vitalstatus des Patienten" />
   <fhirVersion value="4.0.0" />
   <kind value="resource" />
@@ -63,6 +63,7 @@
       <type>
         <code value="dateTime" />
       </type>
+      <mustSupport value="true" />
       <mapping>
         <identity value="ADT-GEKID" />
         <map value="Verlauf:Untersuchungsdatum_Verlauf" />
@@ -102,5 +103,5 @@
       <path value="Observation.value[x].coding.code" />
       <min value="1" />
     </element>
-    </differential>
+  </differential>
 </StructureDefinition>

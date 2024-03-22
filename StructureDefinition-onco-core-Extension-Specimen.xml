@@ -2,9 +2,9 @@
 <StructureDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xmlns="http://hl7.org/fhir">
   <url value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Extension-Specimen"/>
-  <version value="0.1.0"/>
+  <version value="0.9.0" />
   <name value="Specimen"/>
-  <status value="draft"/>
+  <status value="active"/>
   <date value="2019-07-01"/>
   <publisher value="DKTK"/>
   <description value="Extension: eine Referenz zum Biomaterial"/>

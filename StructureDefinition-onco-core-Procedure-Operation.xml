@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <url value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Procedure-Operation" />
-  <version value="0.1.0" />
+  <version value="0.9.0" />
   <name value="Operation" />
-  <status value="draft" />
+  <status value="active" />
   <description value="Ermittlung der Operationsdaten" />
   <fhirVersion value="4.0.0" />
   <kind value="resource" />
@@ -12,16 +12,6 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Procedure" />
   <derivation value="constraint" />
   <differential>
-    <element id="Procedure.extension">
-      <path value="Procedure.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
     <element id="Procedure.extension:Intention">
       <path value="Procedure.extension" />
       <sliceName value="Intention" />
@@ -79,15 +69,18 @@
     <element id="Procedure.code.coding:OPS">
       <path value="Procedure.code.coding" />
       <sliceName value="OPS" />
+      <type>
+        <code value="Coding" />
+        <profile value="http://fhir.de/StructureDefinition/CodingOPS" />
+      </type>
     </element>
     <element id="Procedure.code.coding:OPS.system">
       <path value="Procedure.code.coding.system" />
       <min value="1" />
-      <fixedUri value="http://fhir.de/CodeSystem/dimdi/ops" />
+      <fixedUri value="http://fhir.de/CodeSystem/bfarm/ops" />
     </element>
     <element id="Procedure.code.coding:OPS.version">
       <path value="Procedure.code.coding.version" />
-      <min value="1" />
       <binding>
         <strength value="extensible" />
         <description value="OPS-Version" />
@@ -113,6 +106,24 @@
         <code value="Reference" />
         <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Encounter-Fall" />
       </type>
+    </element>
+    <element id="Procedure.performed[x]">
+      <path value="Procedure.performed[x]" />
+      <short value="Datum der OP" />
+      <definition value="Datum der Operation" />
+      <type>
+        <code value="dateTime" />
+      </type>
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="ADT-GEKID" />
+        <map value="OP:OP_Datum" />
+        <comment value="OP:OP_Datum" />
+      </mapping>
+      <mapping>
+        <identity value="ISO-11179" />
+        <map value="urn:adt:dataelement:69:1" />
+      </mapping>
     </element>
     <element id="Procedure.performer.actor">
       <path value="Procedure.performer.actor" />
@@ -168,5 +179,59 @@
       <min value="1" />
       <fixedUri value="http://dktk.dkfz.de/fhir/onco/core/CodeSystem/GesamtbeurteilungResidualstatusCS" />
     </element>
-    </differential>
+    <element id="Procedure.complication">
+      <path value="Procedure.complication" />
+      <slicing>
+        <discriminator>
+          <type value="pattern" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="ADT-GEKID" />
+        <map value="OP:OP_Komplikationen" />
+        <comment value="OP Komplikationen" />
+      </mapping>
+    </element>
+    <element id="Procedure.complication:ADT-OPKomplikationen">
+      <path value="Procedure.complication" />
+      <sliceName value="ADT-OPKomplikationen" />
+      <mustSupport value="true" />
+      <binding>
+        <strength value="extensible" />
+        <description value="OP Komplikationen nach ADT/oBDS" />
+        <valueSet value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/OPKomplikationenVS" />
+      </binding>
+    </element>
+    <element id="Procedure.complication:ADT-OPKomplikationen.coding.system">
+      <path value="Procedure.complication.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://fhir.de/ValueSet/bfarm/icd-10-gm" />
+    </element>
+    <element id="Procedure.complication:ADT-OPKomplikationen.coding.code">
+      <path value="Procedure.complication.coding.code" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Procedure.complication:ICD-10">
+      <path value="Procedure.complication" />
+      <sliceName value="ICD-10" />
+      <mustSupport value="true" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://fhir.de/ValueSet/bfarm/icd-10-gm" />
+      </binding>
+    </element>
+    <element id="Procedure.complication:ICD-10.coding.system">
+      <path value="Procedure.complication.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://fhir.de/CodeSystem/bfarm/icd-10-gm" />
+    </element>
+    <element id="Procedure.complication:ICD-10.coding.code">
+      <path value="Procedure.complication.coding.code" />
+      <min value="1" />
+    </element>
+  </differential>
 </StructureDefinition>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <url value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Observation-Histologie" />
-  <version value="0.1.0" />
+  <version value="0.9.0" />
   <name value="Histologie" />
-  <status value="draft" />
+  <status value="active" />
   <description value="Gibt an, welche Histologie der Tumor aufweist, basierend auf der aktuellen ICD-O-3 Klassifizierung" />
   <fhirVersion value="4.0.0" />
   <kind value="resource" />
@@ -38,6 +38,15 @@
       </type>
       <mustSupport value="true" />
     </element>
+    <element id="Observation.focus">
+      <path value="Observation.focus" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Resource" />
+        <targetProfile value="http://dktk.dkfz.de/fhir/StructureDefinition/onco-core-Condition-Primaerdiagnose" />
+      </type>
+      <mustSupport value="true" />
+    </element>
     <element id="Observation.encounter">
       <path value="Observation.encounter" />
       <type>
@@ -51,6 +60,16 @@
       <type>
         <code value="dateTime" />
       </type>
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="ADT-GEKID" />
+        <map value="Histologie:Histologiedatum" />
+        <comment value="Histologie:Histologiedatum" />
+      </mapping>
+      <mapping>
+        <identity value="ISO-11179" />
+        <map value="urn:adt:dataelement:35:1" />
+      </mapping>
     </element>
     <element id="Observation.performer">
       <path value="Observation.performer" />
@@ -71,6 +90,7 @@
       <path value="Observation.value[x].coding" />
       <min value="1" />
       <max value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="Observation.value[x].coding.system">
       <path value="Observation.value[x].coding.system" />
@@ -78,12 +98,14 @@
       <definition value="International Classification of Diseases for Oncology, version 3" />
       <min value="1" />
       <fixedUri value="urn:oid:2.16.840.1.113883.6.43.1" />
+      <mustSupport value="true" />
     </element>
     <element id="Observation.value[x].coding.version">
       <path value="Observation.value[x].coding.version" />
       <short value="ICD-O Katalog Morphologie (Version)" />
       <definition value="Katalogversion der ICD-O" />
       <min value="1" />
+      <mustSupport value="true" />
       <binding>
         <strength value="extensible" />
         <description value="ICD-O-3 Version" />
@@ -105,11 +127,11 @@
       <short value="Morphologie" />
       <definition value="Gibt an, welche Histologie der Tumor aufweist, basierend auf der aktuellen ICD-O-3 Klassifizierung" />
       <min value="1" />
-      <mustSupport value="false" />
+      <mustSupport value="true" />
       <binding>
         <strength value="required" />
         <description value="ICD-O-3 Morphologie" />
-        <valueSet value="urn:oid:2.16.840.1.113883.6.43.1" />
+        <valueSet value="http://dktk.dkfz.de/fhir/onco/core/ValueSet/MorphologieICDO3VS" />
       </binding>
       <mapping>
         <identity value="ADT-GEKID" />
@@ -120,6 +142,19 @@
         <identity value="ISO-11179" />
         <map value="urn:dktk:dataelement:7:2" />
         <comment value="urn:dktk:dataelement:7:2" />
+      </mapping>
+    </element>
+    <element id="Observation.value[x].text">
+      <path value="Observation.value[x].text" />
+      <mustSupport value="true" />
+      <mapping>
+        <identity value="ADT-GEKID" />
+        <map value="Histologie.Morphologie_Freitext" />
+        <comment value="Histologie.Morphologie_Freitext" />
+      </mapping>
+      <mapping>
+        <identity value="ISO-11179" />
+        <map value="urn:adt:dataelement:39:1" />
       </mapping>
     </element>
     <element id="Observation.specimen">
@@ -155,5 +190,5 @@
       </type>
       <mustSupport value="true" />
     </element>
-    </differential>
+  </differential>
 </StructureDefinition>

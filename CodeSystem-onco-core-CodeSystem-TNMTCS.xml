@@ -10,9 +10,9 @@
         </div>
     </text>
     <url value="http://dktk.dkfz.de/fhir/onco/core/CodeSystem/TNMTCS"/>
-    <version value="0.1.0"/>
+    <version value="0.9.0" />
     <name value="TNMTCS"/>
-    <status value="draft"/>
+    <status value="active"/>
     <publisher value="DKTK"/>
     <contact>
         <telecom>
@@ -60,6 +60,18 @@
     <concept>
         <code value="1c"/>
         <display value="1c"/>
+    </concept>
+    <concept>
+        <code value="1c1"/>
+        <display value="1c1"/>
+    </concept>
+    <concept>
+        <code value="1c2"/>
+        <display value="1c2"/>
+    </concept>
+    <concept>
+        <code value="1c3"/>
+        <display value="1c3"/>
     </concept>
     <concept>
         <code value="1d"/>
