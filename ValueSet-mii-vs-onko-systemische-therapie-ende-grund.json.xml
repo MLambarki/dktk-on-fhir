@@ -1,0 +1,61 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="mii-vs-onko-systemische-therapie-ende-grund" />
+  <meta>
+    <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset" />
+  </meta>
+  <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-systemische-therapie-ende-grund" />
+  <version value="2024.0.0-ballot" />
+  <name value="MII_VS_Onko_Systemische_Therapie_Ende_Grund" />
+  <title value="MII VS Onkologie Systemische Therapie Ende Grund" />
+  <status value="draft" />
+  <experimental value="false" />
+  <publisher value="Medizininformatik Initiative" />
+  <contact>
+    <telecom>
+      <system value="url" />
+      <value value="https://www.medizininformatik-initiative.de" />
+    </telecom>
+  </contact>
+  <description value="oBDS-spezifisches ValueSet für Klassifikation des Grundes der Beendigung der Systemischen Therapie" />
+  <compose>
+    <include>
+      <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-therapie-grund-ende" />
+      <concept>
+        <code value="E" />
+        <display value="reguläres Ende" />
+      </concept>
+      <concept>
+        <code value="R" />
+        <display value="reguläres Ende mit Dosisreduktion" />
+      </concept>
+      <concept>
+        <code value="W" />
+        <display value="reguläres Ende mit Substanzwechsel" />
+      </concept>
+      <concept>
+        <code value="A" />
+        <display value="Abbruch wegen Nebenwirkungen" />
+      </concept>
+      <concept>
+        <code value="P" />
+        <display value="Abbruch wegen Progress" />
+      </concept>
+      <concept>
+        <code value="S" />
+        <display value="Abbruch aus sonstigen Gründen" />
+      </concept>
+      <concept>
+        <code value="V" />
+        <display value="Patient verweigert weitere Therapie" />
+      </concept>
+      <concept>
+        <code value="T" />
+        <display value="Patient verstorben" />
+      </concept>
+      <concept>
+        <code value="U" />
+        <display value="unbekannt" />
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

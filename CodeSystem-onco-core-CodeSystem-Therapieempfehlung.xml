@@ -4,14 +4,14 @@
         <status value="generated"/>
         <div xmlns="http://www.w3.org/1999/xhtml">
             <p>
-                <b>SYST-Therapieart CodeSystem</b>
+                <b>Therapieempfehlung CodeSystem</b>
             </p>
-            <p>Art der Therapie</p>
+            <p>Therapieempfehlung</p>
         </div>
     </text>
-    <url value="http://dktk.dkfz.de/fhir/onco/core/CodeSystem/SYSTTherapieartCS"/>
-    <version value="1.0.0" />
-    <name value="SYSTTherapieartCS"/>
+    <url value="http://dktk.dkfz.de/fhir/onco/core/CodeSystem/TherapieempfehlungCS"/>
+    <version value="0.9.0" />
+    <name value="TherapieempfehlungCS"/>
     <status value="active"/>
     <publisher value="DKTK"/>
     <contact>
@@ -24,7 +24,7 @@
     <caseSensitive value="true"/>
     <compositional value="false"/>
     <content value="complete"/>
-    <count value="8"/>
+    <count value="11"/>
     <concept>
         <code value="CH"/>
         <display value="Chemotherapie"/>
@@ -57,42 +57,17 @@
         <code value="SO"/>
         <display value="Sonstiges"/>
     </concept>
+    <concept>
+        <code value="KW"/>
+        <display value="keine weitere tumorspezifische Therapie empfohlen"/>
+    </concept>
     <!-- ADT Erweiterung -->
     <concept>
         <code value="ST"/>
         <display value="Strahlentherapie"/>
     </concept>
-    <concept>
-        <code value="OP"/>
-        <display value="Operation"/>
-    </concept>
-    <concept>
-        <code value="CI"/>
-        <display value="Chemo- + Immun-/Antikörpertherapie"/>
-    </concept>
-    
-    <concept>
-        <code value="CZ"/>
-        <display value="Chemotherapie + zielgerichtete Substanzen"/>
-    </concept>
-    
-    <concept>
-        <code value="CI"/>
-        <display value="Chemo- + Immun-/Antikörpertherapie + zielgerichtete Substanzen"/>
-    </concept>
-    
-    <concept>
-        <code value="IZ"/>
-        <display value="Immun-/Antikörpertherapie + zielgerichtete Substanzen"/>
-    </concept>
-    
-    <concept>
-        <code value="SZ"/>
-        <display value="Stammzelltransplantation (inkl. Knochenmarktransplantation)"/>
-    </concept>
-    
-    <concept>
-        <code value="WW"/>
-        <display value="Watchful Waiting"/>
-    </concept>
+            <concept>
+                <code value="OP"/>
+                <display value="Operation"/>
+            </concept>
 </CodeSystem>
