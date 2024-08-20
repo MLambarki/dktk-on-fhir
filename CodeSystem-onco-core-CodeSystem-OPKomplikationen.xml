@@ -23,7 +23,6 @@
     <description value="OP Komplikationen"/>
     <caseSensitive value="true"/>
     <compositional value="false"/>
-    <content value="complete"/>
     <content value="complete" />
   <count value="79" />
   <concept>
