@@ -22,7 +22,7 @@
         <include>
             <system value="http://dktk.dkfz.de/fhir/onco/core/CodeSystem/Projects"/>
             <concept>
-                <code value="http://dktk.dkfz.de/fhir/sid/exliquid-specimen"/>^^
+                <code value="http://dktk.dkfz.de/fhir/sid/exliquid-specimen"/>
                 <display value="Exliquid"/>
             </concept>
         </include>
